@@ -1136,27 +1136,78 @@ void Ascending() {
 
 void FailureRate() {
 
-	int N = 0;
-	std::vector<int> stages;
-	std::sort(stages.begin(), stages.end());
-	
-	int challengers = N;
-	int staystage = 0;
-	int success = 0;
+	int N = 500;
+	std::vector<int> stages = {1,200,62,97,48,231,54,99,122,333,501,1,200,62,97,48,231,54,99,48,231,54 };
 
-	std::multimap<float, int> failurerate;
+	std::sort(stages.begin(), stages.end());
+
+	int challengers = stages.size();
+	int staystage = 0;
+
+	std::set<std::pair<float, int>> failurerate;
 
 	std::vector<int> answer;
 
-	for (auto i = stages.begin(); i != stages.end(); i++)
+	for (auto i = stages.begin(); i != stages.end();)
 	{
-		auto next = std::find_end(i, stages.end(), i, i+1);
 		staystage = *i;
-		failurerate.insert(std::pair<float,int>(std::distance(i, next) / challengers, staystage));
+		auto next = std::find(stages.rbegin(), std::vector<int>::reverse_iterator(i), staystage);
 
-		challengers -= std::distance(i, next);
+		float staypersons = std::distance(i, next.base());
+		failurerate.insert(std::pair<float, int>(challengers / staypersons, staystage));
+
+		challengers -= staypersons;
+		i = next.base();
 	}
-	
+	bool visit[501] = { 0, };
+	for (auto i : failurerate)
+	{
+		if (i.second < N + 1)
+		{
+			visit[i.second] = true;
+			answer.push_back(i.second);
+		}
+	}
+	for (int i = 1; i < N + 1; i++)
+	{
+		if (!visit[i]) {
+			answer.push_back(i);
+		}
+	}
+	for (auto i = failurerate.begin(); i != failurerate.end(); i++)
+	{
+		std::cout << i->first << " " << i->second << std::endl;
+	}
+
+	std::cout << "answer" << std::endl;
+	for (auto i = 0; i < N; i++)
+	{
+		std::cout << answer[i] << " ";
+		if (i%10 < 1)
+		{
+			std::cout << std::endl;
+		}
+	}
+
+}
+
+void Common_Number() {
+	int n = 2;
+	int m = 5;
+
+	int left = n, right = m;
+
+	int gcm, lcd = 0;
+
+	while (left != 0) {
+		int temp = left;
+		left = right % left ;
+		right = temp;
+	}
+	gcm = right;
+	lcd = n * m / gcm;
+
+	std::cout << "gcm = " << gcm << "lcd = " << lcd << std::endl;
 }
 
 void Test_stlMap() {

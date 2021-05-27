@@ -1422,7 +1422,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Test_stlMap();
+	Common_Number();
 	return 0;
 }
 

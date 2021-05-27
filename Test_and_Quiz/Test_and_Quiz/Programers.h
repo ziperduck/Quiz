@@ -87,3 +87,5 @@ void Ascending();
 void FailureRate();
 
 void Test_stlMap();
+
+void Common_Number();
