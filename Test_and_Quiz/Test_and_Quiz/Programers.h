@@ -11,6 +11,7 @@
 #include <numeric>
 #include <cctype>
 #include <climits>
+#include <cmath>
 using  std::vector;
 
 vector<int> pull_two_number();
@@ -89,3 +90,15 @@ void FailureRate();
 void Test_stlMap();
 
 void Common_Number();
+
+void DivisorCound();
+
+void Hidden_Phonenumber();
+
+void SecretMap();
+
+void SequenceNumber();
+
+void MatricAddcation();
+
+void DartGame();

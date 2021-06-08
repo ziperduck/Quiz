@@ -1422,7 +1422,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Common_Number();
+	DartGame();
 	return 0;
 }
 

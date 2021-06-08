@@ -1210,6 +1210,23 @@ void Common_Number() {
 	std::cout << "gcm = " << gcm << "lcd = " << lcd << std::endl;
 }
 
+void DivisorCound() {
+	int left = 13, right = 17;
+	int answer = 0;
+	for (int i = left; i <= right; i++)
+	{
+		float sqrt_i = std::sqrt(i);
+		answer += sqrt_i == std::floor(sqrt_i) ? sqrt_i : -sqrt_i;
+	}
+	std::cout << "anwer = " << answer << std::endl;
+}
+
+void Hidden_Phonenumber() {
+	std::string Phonenumber = "1234";
+	std::fill_n(Phonenumber.begin(), Phonenumber.size() - 4, '*');
+	std::cout << Phonenumber << std::endl;
+}
+
 void Test_stlMap() {
 	std::multimap<float, int> fi;
 	fi.insert(std::pair<float, int>(0.5f, 1));
@@ -1222,4 +1239,103 @@ void Test_stlMap() {
 	{
 		std::cout << " " << i->first << " " << i->second << std::endl;
 	}
+}
+
+void SecretMap() {
+	int n = 5;
+	std::vector<int> arr1 = { 9, 20, 28, 18, 11 };
+	std::vector<int> arr2 = { 30, 1, 21, 17, 28 };
+	std::vector<std::string> answer(n,std::string(n,'#'));
+
+	for (int i = 0; i < n; i++)
+	{
+		int width = arr1[i] | arr2[i];
+		for (auto k = answer[i].rbegin(); k != answer[i].rend(); k++)
+		{
+			if (width % 2 == 0)
+			{
+				*k = ' ';
+			}
+			width = width >> 1;
+		}
+	}
+
+}
+
+void SequenceNumber() {
+	int x = 2;
+	int n = 5;
+	vector<long long> answer(n);
+	std::generate(answer.begin(), answer.end(), [&n,x]() {
+		return x* n--; });
+	std::partial_sum(answer.begin(), answer.end(), answer.begin());
+	
+}
+
+void MatricAddcation() {
+	vector<vector<int>> arr1; 
+	vector<vector<int>> arr2;
+
+	vector<vector<int>> answer;
+	for (auto a1 = arr1.begin(), a2 = arr2.begin();a1 != arr1.end() ; ++a1,++a2) {
+		for (auto ab1 = a1->begin(), ab2 = a2->begin(); ab1 != a1->end(); ++ab1, ++ab2) {
+			*ab1 += *ab2;
+		}
+	}
+	for (int i = 0; i < arr1.size(); ++i)
+	{
+		for (int k = 0; k < arr1[i].size(); k++)
+		{
+			arr1[i][k] += arr2[i][k];
+		}
+	}
+}
+
+void DartGame() {
+
+	std::string dartResult = "10T2D3D#";
+	//100 4 -9
+	std::vector<int> value;
+	int answer = 0;
+	int val_size = 0;
+
+	for (auto i = dartResult.begin(); i != dartResult.end(); i++)
+	{
+		switch (*i)
+		{
+		case 'S':
+			break;
+		case 'D':
+			value.back() = std::pow(value.back(), 2);
+			break;
+		case 'T':
+			value.back() = std::pow(value.back(), 3);
+			break;
+			
+		case '*':
+			value.back() *= 2;
+			if (val_size > 1)
+			{
+				value[val_size - 2] *= 2;
+			}
+			break;
+		case '#':
+			value.back() *= -1;
+			break;
+			
+		default:
+			value.push_back(*i - '0');
+			if (isdigit(*(i + 1)))
+			{
+				value.back() *= 10;
+				i++;
+			}
+			val_size++;
+			break;
+		}
+
+
+	}
+	answer = std::accumulate(value.begin(), value.end(), 0);
+	std::cout <<"answer = "<< answer << std::endl;
 }
