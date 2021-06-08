@@ -102,3 +102,5 @@ void SequenceNumber();
 void MatricAddcation();
 
 void DartGame();
+
+void MoreSpicy();

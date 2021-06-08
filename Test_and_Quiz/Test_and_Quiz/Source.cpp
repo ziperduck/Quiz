@@ -1422,7 +1422,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	DartGame();
+	MoreSpicy();
 	return 0;
 }
 

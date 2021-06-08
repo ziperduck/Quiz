@@ -513,7 +513,7 @@ void Seconds_prices() {
 			}
 		}
 	
-		descending.push(std::pair(prices[i + 1], i + 1));
+		descending.push(std::pair<int,int>(prices[i + 1], i + 1));
 	}
 	while (!descending.empty())
 	{
@@ -1299,6 +1299,8 @@ void DartGame() {
 	int answer = 0;
 	int val_size = 0;
 
+	//stringstream은 문자열을 자료형에 맞게 적용해준다.
+
 	for (auto i = dartResult.begin(); i != dartResult.end(); i++)
 	{
 		switch (*i)
@@ -1338,4 +1340,30 @@ void DartGame() {
 	}
 	answer = std::accumulate(value.begin(), value.end(), 0);
 	std::cout <<"answer = "<< answer << std::endl;
+}
+
+void MoreSpicy() {
+	std::vector<int> scoville = { 1, 2, 3, 1, 1, 1 };
+	int K = 30;
+	
+	int answer = 0;
+	//priority_queue 우선순위 큐 
+	std::multiset<int> sort_scoville = { scoville.begin(), scoville.end() };
+
+	for (auto i = sort_scoville.begin(); i != std::prev(sort_scoville.end());)
+	{
+		if (*i >= K)
+		{
+			break;
+		}
+
+		sort_scoville.insert(*i + *std::next(i) * 2);
+		i = sort_scoville.erase(i, std::next(i,2));
+		answer++;
+	}
+	if (*sort_scoville.begin() < K)
+	{
+		answer = -1;
+	}
+	std::cout << "answer size = " << answer << std::endl;
 }
