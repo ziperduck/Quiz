@@ -1367,3 +1367,48 @@ void MoreSpicy() {
 	}
 	std::cout << "answer size = " << answer << std::endl;
 }
+
+
+void FibonacciRemainder() {
+	int n = 1000;
+	int answer = 1;
+	
+	int one = 1;
+	int two = 1;
+
+	for (int i = 2; i < n; i++) {
+		two = one;
+		one = answer;
+		answer = one + two;
+		answer %= 1234567;
+	}
+
+	std::cout << "n = " << n << "answer = " << answer << std::endl;
+}
+
+matrix operator* (matrix &a, matrix &b) {
+	int n = a.size();
+	matrix c(n, vector<long long>(n));
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < n; j++)
+			for (int k = 0; k < n; k++)
+				c[i][j] += a[i][k] * b[k][j];
+	return c;
+}
+
+long long fibonacci(int n)
+{
+	matrix res = { {1, 0},{0, 1} };
+	matrix fib = { {1, 1},{1, 0} };
+	while (n) {
+		if (n % 2 == 1) res = res * fib;
+		fib = fib * fib;
+		n *= 0.5;
+	}
+	return res[0][1];
+}
+
+void FibonacciRemainderMatrix() {
+	int n = 20;
+	std::cout << "n = " << n << fibonacci(n);
+}

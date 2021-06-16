@@ -1422,7 +1422,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	MoreSpicy();
+	FibonacciRemainderMatrix();
 	return 0;
 }
 

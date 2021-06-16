@@ -104,3 +104,13 @@ void MatricAddcation();
 void DartGame();
 
 void MoreSpicy();
+
+void FibonacciRemainder();
+
+typedef vector<vector<long long>> matrix;
+
+matrix operator* (matrix &a, matrix &b);
+
+long long fibonacci(int n);
+
+void FibonacciRemainderMatrix();
