@@ -1413,26 +1413,46 @@ void FibonacciRemainderMatrix() {
 	int n = 20;
 	std::cout << "n = " << n << fibonacci(n);
 }
-
+/*
+* vector for 안 사용하기 
+* std::copy(vi.begin(), vi.end(), std::ostream_iterator<int>(std::cout, " "));
+*/
 
 /*
-스텍 하나를 준비하고 문자열의 값을 하나씩 넣으면서 비교해본다.
-만약 같은 것들이 있을 경우 따로 저장해놓고 아니면 스텍이 넣는다.
+* 스텍 하나를 준비하고 문자열의 값을 하나씩 넣으면서 비교해본다.
+* 만약 같은 것들이 있을 경우 따로 저장해놓고 아니면 스텍이 넣는다.
+* 그냥 문자열을 분활해서 찾아보는게 현명하다.
+*/
+/*
+* ababccccababccccccc
+* abccabccc
+* ababcababc
+* 
 */
 void CompressionString() {
-	std::string s;
-	
-	std::vector<int> vi = std::vector<int>(s.begin(),s.end());
+	std::string s = "asdc";
 
-	for (int i = 1; i < vi.size() / 2; )
+	int answer = s.size();
+
+	int range = s.size();
+	// i는 vi의 약수를 찾고 그 약수를 
+	for (int i = 1; i * i <= range; i++)
 	{
-		for (auto k = ; k < length; k++)
+		if (range % i != 0) {
+			continue;
+		}
+
+		int common[2] = {i, range / i};
+
+		for (int k = 0; k < common[0]; k++)
+		{
+		}
+
+		for (int k = 0; k < common[1]; k++)
 		{
 
 		}
-		
 	}
 
-	int answer = 0;
 
 }
