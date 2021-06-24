@@ -1,3 +1,4 @@
+#include <sstream>
 #include "Programers.h"
 
 
@@ -1411,4 +1412,27 @@ long long fibonacci(int n)
 void FibonacciRemainderMatrix() {
 	int n = 20;
 	std::cout << "n = " << n << fibonacci(n);
+}
+
+
+/*
+스텍 하나를 준비하고 문자열의 값을 하나씩 넣으면서 비교해본다.
+만약 같은 것들이 있을 경우 따로 저장해놓고 아니면 스텍이 넣는다.
+*/
+void CompressionString() {
+	std::string s;
+	
+	std::vector<int> vi = std::vector<int>(s.begin(),s.end());
+
+	for (int i = 1; i < vi.size() / 2; )
+	{
+		for (auto k = ; k < length; k++)
+		{
+
+		}
+		
+	}
+
+	int answer = 0;
+
 }

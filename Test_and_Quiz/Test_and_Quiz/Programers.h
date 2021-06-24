@@ -114,3 +114,5 @@ matrix operator* (matrix &a, matrix &b);
 long long fibonacci(int n);
 
 void FibonacciRemainderMatrix();
+
+void CompressionString();
