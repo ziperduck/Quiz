@@ -42,18 +42,18 @@ void Test_MyString_Fun() {
 	MyString mys_s("Naver");
 
 	printf("mys_c.size = %d\n mys_s.size = %d\n", mys_c.get_Size(), mys_s.get_Size());
-	//¹®ÀÚ¿­´õÇÏ±â
+	//ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½Ï±ï¿½
 	mys_c.add_String("6789");
 	mys_s.add_String("A");
 
 	mys_c.printer_String();
 	mys_s.printer_String();
 
-	//¹®ÀÚ¿­ Ã£±â
+	//ï¿½ï¿½ï¿½Ú¿ï¿½ Ã£ï¿½ï¿½
 	printf("mys_c find %d\n", mys_c.find_String("ver"));
 	printf("mys_s find %d\n", mys_s.find_String("ADS"));
 
-	//»çÀÌÁî ºñ±³
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 	printf("mys_c com \"88651\" or %d\n", mys_c.size_comparison_String("86651"));
 	printf("mys_s com \"ABC\" or %d\n", mys_s.size_comparison_String("ABC"));
 
@@ -67,7 +67,7 @@ void Test_Point_And_Array() {
 	int num[] = { 1,2,3,4,5 };
 	char* name = "asdf";
 	int* pnum = num;
-	printf("¹è¿­ÀÇ Æ÷ÀÎÅÍÀÇ »çÀÌÁî%d ¹è¿­ÀÇ »çÀÌÁî%d\n", sizeof(&num), sizeof(num));
+	printf("ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%d ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%d\n", sizeof(&num), sizeof(num));
 	printf("&num = %p, num = %p, &num[0] %p, &num[1] %p\n"
 		,&num, num, &num[0], &num[1]);
 	printf("&name = %p, name = %p, &name[0] %p, &name[1] %p\n"
@@ -86,12 +86,12 @@ void Test_Point_And_Array() {
 
 void Test_Point_Of_Array() {
 	/*
-	¹è¿­Àº Ã¹¹øÂ° ¿ø¼Ò¸¦ °¡¸®Å°´Â Æ÷ÀÎÅÍº¯¼öÀ» °¡Áö°íÀÖ´Ù.
-	¹è¿­ÀÇ ÀÌ¸§À» »ç¿ëÇÒ°æ¿ì¿¡´Â ÀÌ Æ÷ÀÎÅÍ º¯¼ö¸¦ °¡Áö°í¿Â´Ù.
-	±×·¯³ª ÀÌ Æ÷ÀÎÅÍ º¯¼ö´Â ÀÓ½ÃÀûÀÎ°ÍÀÎ ¿ìÃø°ªÀÌ´Ù.
-	±×·±µ¥ ¿Ö Æ÷ÀÎÅÍ ¹è¿­Àº (*)¸¦ ºÙ¿©¾ßÇÏ´Â °ÍÀÌÁö?
-	¹è¿­ Æ÷ÀÎÅÍ¿¡ *¸¦ ºÙÀÏ°æ¿ì Æ÷ÀÎÅÍ°¡ µÈ´Ù.
-	¹è¿­ Æ÷ÀÎÅÍ´Â ¹è¿­ÀÇ °ªÀ» ¹ÞÀ»°æ¿ì ¹è¿­°ú µ¿ÀÏÇÏ°Ô ÀÓ½Ã Æ÷ÀÎÅÍ°ªÀ» ¸¸µç´Ù.
+	ï¿½è¿­ï¿½ï¿½ Ã¹ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Íºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½.
+	ï¿½è¿­ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ò°ï¿½ì¿¡ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½.
+	ï¿½×·ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ó½ï¿½ï¿½ï¿½ï¿½Î°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì´ï¿½.
+	ï¿½×·ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ (*)ï¿½ï¿½ ï¿½Ù¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
+	ï¿½è¿­ ï¿½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ *ï¿½ï¿½ ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í°ï¿½ ï¿½È´ï¿½.
+	ï¿½è¿­ ï¿½ï¿½ï¿½ï¿½ï¿½Í´ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ó½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.
 
 	Arr = int*
 	*Arr = int
@@ -333,20 +333,20 @@ void Test_Map() {
 	using One_Char = OnePunchMan_Character;
 	
 	std::map<One_Char, std::string> SLank;
-	SLank.insert(std::make_pair(One_Char(3, "½Ç¹öÆØ"), "À¯¼ö¾Ï»ì±Ç"));
-	SLank.insert(std::make_pair(One_Char(1, "ºí·¹½ºÆ®"), "½ÇÁ¾"));
-	SLank.insert(std::make_pair(One_Char(7, "Å·"), "Å·ºÎ½ºÅÍ"));
-	SLank.insert(std::make_pair(One_Char(4, "¾ÆÅä¹Í »ç¹«¶óÀÌ"), "°Ë¼ú"));
-	SLank.insert(std::make_pair(One_Char(2, "Å¸Ã÷¸¶Å°"), "¿°µ¿·Â"));
-	SLank.insert(std::make_pair(One_Char(2, "Å¸Ã÷¸¶Å°"), "¿°µ¿·Â"));
+	SLank.insert(std::make_pair(One_Char(3, "ï¿½Ç¹ï¿½ï¿½ï¿½"), "ï¿½ï¿½ï¿½ï¿½ï¿½Ï»ï¿½ï¿½"));
+	SLank.insert(std::make_pair(One_Char(1, "ï¿½ï¿½ï¿½ï¿½ï¿½Æ®"), "ï¿½ï¿½ï¿½ï¿½"));
+	SLank.insert(std::make_pair(One_Char(7, "Å·"), "Å·ï¿½Î½ï¿½ï¿½ï¿½"));
+	SLank.insert(std::make_pair(One_Char(4, "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ç¹«ï¿½ï¿½ï¿½ï¿½"), "ï¿½Ë¼ï¿½"));
+	SLank.insert(std::make_pair(One_Char(2, "Å¸ï¿½ï¿½ï¿½ï¿½Å°"), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"));
+	SLank.insert(std::make_pair(One_Char(2, "Å¸ï¿½ï¿½ï¿½ï¿½Å°"), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"));
 
 
 	Print_Map(SLank);
 
-	SLank.erase(One_Char(3, "½Ç¹öÆØ"));
+	SLank.erase(One_Char(3, "ï¿½Ç¹ï¿½ï¿½ï¿½"));
 	SLank.erase(SLank.begin());
 	SLank.insert(
-		std::pair<One_Char,std::string>(One_Char(0, "»çÀÌÅ¸¸¶"), "Áø½É½Ã¸®Áî"));
+		std::pair<One_Char,std::string>(One_Char(0, "ï¿½ï¿½ï¿½ï¿½Å¸ï¿½ï¿½"), "ï¿½ï¿½ï¿½É½Ã¸ï¿½ï¿½ï¿½"));
 	Print_Map(SLank);
 
 }
@@ -445,20 +445,20 @@ void Test_DetailedString() {
 	std::basic_string<char, my_traits> my_s1 = "1a";
 	std::basic_string<char, my_traits> my_s2 = "a1";
 
-	std::cout << "¼ýÀÚÀÇ ¿ì¼±¼øÀ§°¡ ´õ ³·Àº ¹®ÀÚ¿­ : " << std::boolalpha
+	std::cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ì¼±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ : " << std::boolalpha
 		<< (my_s1 < my_s2) << std::endl;
 
 	std::string s1 = "1a";
 	std::string s2 = "a1";
 
-	std::cout << "ÀÏ¹Ý ¹®ÀÚ¿­ : " << std::boolalpha << (s1 < s2) << std::endl;
+	std::cout << "ï¿½Ï¹ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ : " << std::boolalpha << (s1 < s2) << std::endl;
 
 	std::string Rs = R"foo(
-ÀÌ·±½ÄÀ¸·Î
-»ç¿ëÇÒ¼öÀÖ´Ù
-ÀÌ°É¾²´Â ÀÌÀ¯´Â ³»°¡º¼¶§
-ÆÄ½Ì¿ëÀÎ°Í°°´Ù.
-); ÀÌ°Å´Â ¹«½ÃµÈ´Ù ;°¡ ÀÖ¾î¼­ ¾µ¼öÀÖ´Ù
+ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½Ò¼ï¿½ï¿½Ö´ï¿½
+ï¿½Ì°É¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½Ä½Ì¿ï¿½ï¿½Î°Í°ï¿½ï¿½ï¿½.
+); ï¿½Ì°Å´ï¿½ ï¿½ï¿½ï¿½ÃµÈ´ï¿½ ;ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½
 )foo"; 
 
 	std::cout << Rs << std::endl;
@@ -597,13 +597,13 @@ void Test_Shared() {
 	//std::cout << "sb1 count = " << sb1.use_count() << std::endl;
 	//std::cout << "sb2 count = " << sb2.use_count() << std::endl;
 	/*
-	enÀÌ count°ªÀÌ »ó½ÂÇÏÁö ¾Ê´Â´Ù.
+	enï¿½ï¿½ countï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½.
 	*/
 	Enable_Sh* en = new Enable_Sh;
 	std::shared_ptr<Enable_Sh> se1 = std::make_shared<Enable_Sh>(en);
 	std::shared_ptr<Enable_Sh> se2 = std::make_shared<Enable_Sh>(en);
 	std::shared_ptr<Enable_Sh> se3 = se2->getShared();
-	//se1Àº Áõ°¡ÇÏÁö ¾ÊÀ½
+	//se1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	std::cout << "se1 count = " << se1.use_count() << std::endl;
 	std::cout << "se2 count = " << se2.use_count() << std::endl;
 	std::cout << "se3 count = " << se3.use_count() << std::endl;
@@ -1020,7 +1020,7 @@ void Test_regex() {
 	
 	std::string html = R"(
         <div class="social-login">
-          <div class="small-comment">´ÙÀ½À¸·Î ·Î±×ÀÎ </div>
+          <div class="small-comment">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ </div>
           <div>
             <i class="xi-facebook-official fb-login"></i>
             <i class="xi-google-plus goog-login"></i>
@@ -1028,10 +1028,10 @@ void Test_regex() {
         </div>
         <div class="manual">
           <div class="small-comment">
-            ¶Ç´Â Á÷Á¢ ÀÔ·ÂÇÏ¼¼¿ä (´ñ±Û ¼öÁ¤½Ã ºñ¹Ð¹øÈ£°¡ ÇÊ¿äÇÕ´Ï´Ù)
+            ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½Õ´Ï´ï¿½)
           </div>
-          <input name="name" id="name" placeholder="ÀÌ¸§">
-          <input name="password" id="password" type="password" placeholder="ºñ¹Ð¹øÈ£">
+          <input name="name" id="name" placeholder="ï¿½Ì¸ï¿½">
+          <input name="password" id="password" type="password" placeholder="ï¿½ï¿½Ð¹ï¿½È£">
         </div>
         <div id="adding-comment" class="sk-fading-circle">
           <div class="sk-circle1 sk-circle">a</div>
@@ -1151,7 +1151,7 @@ void Test_random_chrono() {
 		auto now = std::chrono::system_clock::now();
 		std::time_t t = std::chrono::system_clock::to_time_t(now);
 		
-		std::cout << "ÇöÀç ½Ã°£ :" << std::put_time(std::localtime(&t), "%F %T %z")
+		std::cout << "ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ :" << std::put_time(std::localtime(&t), "%F %T %z")
 			<< "\n";
 		break;
 	}
@@ -1229,7 +1229,7 @@ void Test_FileSystem() {
 		break;
 	}
 	case file_system::copy_derectory: {
-		//derectory¸¸ º¹»ç½Ã ¾È¿¡ ³»¿ë¹°ÀÌ º¹»çµÈ´Ù.
+		//derectoryï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È¿ï¿½ ï¿½ï¿½ï¿½ë¹°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È´ï¿½.
 		std::filesystem::path from("./some_file/create");
 		std::filesystem::path to("./copy_file");
 		std::filesystem::path copy_place("./copy_file/copy");
@@ -1318,17 +1318,17 @@ void Test_optional() {
 
 		std::map<int, std::string> m = { {1,"Kim"},{2,"Jin"},{3,"Hungry"} };
 
-		std::cout << "¸Ê 2¿¡ ÇØ´çÇÏ´Â °ªÀº? = " << fn(m, 2).value().c_str() << std::endl;
-		std::cout << "¸Ê 4¿¡ ÇØ´çÇÏ´Â °ªÀÌÀÖ³ª¿ä? = " << std::boolalpha
+		std::cout << "ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Ø´ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½? = " << fn(m, 2).value().c_str() << std::endl;
+		std::cout << "ï¿½ï¿½ 4ï¿½ï¿½ ï¿½Ø´ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö³ï¿½ï¿½ï¿½? = " << std::boolalpha
 			<< fn(m, 4).has_value() << std::endl;
 
 		break;
 	}
 	case Option_Kind::option_create: {
 		Basic bs;
-		std::cout << "option °´Ã¼ »ý¼º---------------" << std::endl;
+		std::cout << "option ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½---------------" << std::endl;
 		std::optional<Basic> ob;
-		std::cout << "º¹»ç »ý¼ºÀÚ ob È£Ãâ" << std::endl;
+		std::cout << "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ob È£ï¿½ï¿½" << std::endl;
 		ob = bs;
 		break;
 	}
@@ -1422,17 +1422,18 @@ void Jotkka_fun() {
 
 
 int main() {
-	CompressionString();
+	SingleTon::SingleTonTest1();
+	SingleTon::SingleTonTest2();
 	return 0;
 }
 
-// ÇÁ·Î±×·¥ ½ÇÇà: <Ctrl+F5> ¶Ç´Â [µð¹ö±×] > [µð¹ö±ëÇÏÁö ¾Ê°í ½ÃÀÛ] ¸Þ´º
-// ÇÁ·Î±×·¥ µð¹ö±×: <F5> Å° ¶Ç´Â [µð¹ö±×] > [µð¹ö±ë ½ÃÀÛ] ¸Þ´º
+// ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½ï¿½ï¿½: <Ctrl+F5> ï¿½Ç´ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½] > [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ ï¿½ï¿½ï¿½ï¿½] ï¿½Þ´ï¿½
+// ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½: <F5> Å° ï¿½Ç´ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½] > [ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½] ï¿½Þ´ï¿½
 
-// ½ÃÀÛÀ» À§ÇÑ ÆÁ: 
-//   1. [¼Ö·ç¼Ç Å½»ö±â] Ã¢À» »ç¿ëÇÏ¿© ÆÄÀÏÀ» Ãß°¡/°ü¸®ÇÕ´Ï´Ù.
-//   2. [ÆÀ Å½»ö±â] Ã¢À» »ç¿ëÇÏ¿© ¼Ò½º Á¦¾î¿¡ ¿¬°áÇÕ´Ï´Ù.
-//   3. [Ãâ·Â] Ã¢À» »ç¿ëÇÏ¿© ºôµå Ãâ·Â ¹× ±âÅ¸ ¸Þ½ÃÁö¸¦ È®ÀÎÇÕ´Ï´Ù.
-//   4. [¿À·ù ¸ñ·Ï] Ã¢À» »ç¿ëÇÏ¿© ¿À·ù¸¦ º¾´Ï´Ù.
-//   5. [ÇÁ·ÎÁ§Æ®] > [»õ Ç×¸ñ Ãß°¡]·Î ÀÌµ¿ÇÏ¿© »õ ÄÚµå ÆÄÀÏÀ» ¸¸µé°Å³ª, [ÇÁ·ÎÁ§Æ®] > [±âÁ¸ Ç×¸ñ Ãß°¡]·Î ÀÌµ¿ÇÏ¿© ±âÁ¸ ÄÚµå ÆÄÀÏÀ» ÇÁ·ÎÁ§Æ®¿¡ Ãß°¡ÇÕ´Ï´Ù.
-//   6. ³ªÁß¿¡ ÀÌ ÇÁ·ÎÁ§Æ®¸¦ ´Ù½Ã ¿­·Á¸é [ÆÄÀÏ] > [¿­±â] > [ÇÁ·ÎÁ§Æ®]·Î ÀÌµ¿ÇÏ°í .sln ÆÄÀÏÀ» ¼±ÅÃÇÕ´Ï´Ù.
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½: 
+//   1. [ï¿½Ö·ï¿½ï¿½ Å½ï¿½ï¿½ï¿½ï¿½] Ã¢ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+//   2. [ï¿½ï¿½ Å½ï¿½ï¿½ï¿½ï¿½] Ã¢ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½Ò½ï¿½ ï¿½ï¿½ï¿½î¿¡ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+//   3. [ï¿½ï¿½ï¿½] Ã¢ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Å¸ ï¿½Þ½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+//   4. [ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½] Ã¢ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½.
+//   5. [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®] > [ï¿½ï¿½ ï¿½×¸ï¿½ ï¿½ß°ï¿½]ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Å³ï¿½, [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®] > [ï¿½ï¿½ï¿½ï¿½ ï¿½×¸ï¿½ ï¿½ß°ï¿½]ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Õ´Ï´ï¿½.
+//   6. ï¿½ï¿½ï¿½ß¿ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½] > [ï¿½ï¿½ï¿½ï¿½] > [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®]ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Ï°ï¿½ .sln ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.

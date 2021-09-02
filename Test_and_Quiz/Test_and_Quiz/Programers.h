@@ -12,6 +12,7 @@
 #include <cctype>
 #include <climits>
 #include <cmath>
+#include <functional>
 using  std::vector;
 
 vector<int> pull_two_number();
@@ -116,3 +117,66 @@ long long fibonacci(int n);
 void FibonacciRemainderMatrix();
 
 void CompressionString();
+namespace SmartPointer {
+
+class Parent {
+public:
+	Parent(int Num) : num(Num) {};
+	virtual ~Parent() = 0 {};
+	virtual int GetNum() = 0;
+
+protected:
+	int num = 0;
+};
+class Child1 :public Parent {
+public:
+	Child1() :Parent(1){};
+	virtual ~Child1() override{};
+	virtual int GetNum() override;
+
+};
+class Child2 :public Parent {
+public:
+	Child2() :Parent(2) {};
+	virtual ~Child2() override {};
+	virtual int GetNum() override;
+
+};
+
+class ChildManager
+{
+public:
+	ChildManager(){}
+	~ChildManager(){}
+
+	static std::shared_ptr<Parent> GetOne() {
+		static std::shared_ptr<Parent> One = std::make_shared<Child1>();
+		return One;
+	}
+	static std::shared_ptr<Parent> GetTwo() {
+		static std::shared_ptr<Parent> Two = std::make_shared<Child2>();
+		return Two;
+	}
+private:
+
+};
+
+void SmartPointTest();
+}
+namespace SingleTon {
+	class Single {
+	public:
+		static Single* GetInstnace();
+
+		void UpNum();
+
+		void PrintNum();
+	private:
+		Single(): num(0){}
+
+		int num;
+	};
+
+	void SingleTonTest1();
+	void SingleTonTest2();
+}

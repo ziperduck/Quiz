@@ -14,26 +14,26 @@ namespace ThreadPool {
 		ThreadPool(size_t num_threads);
 		~ThreadPool();
 
-		// job À» Ãß°¡ÇÑ´Ù.
+		// job ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ñ´ï¿½.
 		template <class F, class... Args>
 		std::future<typename std::result_of<F(Args...)>::type> EnqueueJob(
 			F f, Args... args);
 
 	private:
-		// ÃÑ Worker ¾²·¹µåÀÇ °³¼ö.
+		// ï¿½ï¿½ Worker ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 		size_t num_threads_;
-		// Worker ¾²·¹µå¸¦ º¸°üÇÏ´Â º¤ÅÍ.
+		// Worker ï¿½ï¿½ï¿½ï¿½ï¿½å¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½.
 		std::vector<std::thread> worker_threads_;
-		// ÇÒÀÏµéÀ» º¸°üÇÏ´Â job Å¥.
+		// ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ job Å¥.
 		std::queue<std::function<void()>> jobs_;
-		// À§ÀÇ job Å¥¸¦ À§ÇÑ cv ¿Í m.
+		// ï¿½ï¿½ï¿½ï¿½ job Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ cv ï¿½ï¿½ m.
 		std::condition_variable cv_job_q_;
 		std::mutex m_job_q_;
 
-		// ¸ðµç ¾²·¹µå Á¾·á
+		// ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		bool stop_all;
 
-		// Worker ¾²·¹µå
+		// Worker ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		void WorkerThread();
 	};
 
@@ -53,12 +53,12 @@ namespace ThreadPool {
 				return;
 			}
 
-			// ¸Ç ¾ÕÀÇ job À» »«´Ù.
+			// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ job ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 			std::function<void()> job = std::move(jobs_.front());
 			jobs_.pop();
 			lock.unlock();
 
-			// ÇØ´ç job À» ¼öÇàÇÑ´Ù :)
+			// ï¿½Ø´ï¿½ job ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½ :)
 			job();
 		}
 	}
@@ -76,7 +76,7 @@ namespace ThreadPool {
 	std::future<typename std::result_of<F(Args...)>::type> ThreadPool::EnqueueJob(
 		F f, Args... args) {
 		if (stop_all) {
-			throw std::runtime_error("ThreadPool »ç¿ë ÁßÁöµÊ");
+			throw std::runtime_error("ThreadPool ");
 		}
 
 		using return_type = typename std::result_of<F(Args...)>::type;
