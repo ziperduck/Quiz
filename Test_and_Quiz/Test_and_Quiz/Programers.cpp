@@ -187,7 +187,7 @@ std::vector<int> Chekc_count(std::vector<int>& ans) {
 void Mock_Test() {
 	std::vector<int> answers = { 1,1,3,4,2,4};
 
-	//chul_su 0ï¿½ï¿½, Young_Hee 1ï¿½ï¿½, Min_Ji 2ï¿½ï¿½
+	//chul_su 0¹ø, Young_Hee 1¹ø, Min_Ji 2¹ø
 	int supoja_pattern[3] = { 5,8,10 };
 	std::vector<int> an_count(3);
 
@@ -430,7 +430,7 @@ void triangle_snail() {
 	std::cout << std::endl;
 }
 void joy_stick() {
-	// ï¿½ï¿½ï¿½ï¿½ï¿½-1
+	// ¸î±ÛÀÚ-1
 	std::string name = "JAN";
 	int answer = 0;
 	std::vector<std::tuple<bool, int>> is_A = { {true,0} };
@@ -461,7 +461,7 @@ void joy_stick() {
 	}
 
 	std::cout << "answer" << answer << std::endl;
-	//ï¿½ï¿½ï¿½ï¿½ 15
+	//Á÷Áø 15
 	//123456789ABCDEFG
 	//oooooooooooooooo
 	//ooxxxxxxxxoooooooo	17	16	14	12
@@ -566,12 +566,12 @@ void Disguise() {
 		}
 	}
 	/*
-	ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Äªï¿½Ø¾ï¿½ï¿½Ñ´ï¿½.
-	ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ä°¡ ï¿½ï¿½ï¿½ï¿½.
-	ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Äªï¿½Ï¿ï¿½ ï¿½Ô¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï½Ã¿ï¿½
+	¿ÊÀ» Á¾·ùº°·Î ¸ÅÄªÇØ¾ßÇÑ´Ù.
+	¸ðµç ¿ÊÀÇ Á¾·ù¸¦ ´Ù ÀÔÀ» ÇÊ¿ä°¡ ¾ø´Ù.
+	¿ÊÀ» ´Ù ¸ðµÎ ¸ÅÄªÇÏ¿© ÀÔ¾úÀ»¶§ °æ¿ìÀÇ ¼ö¸¦ ¸»ÇÏ½Ã¿À
 
-	ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Äªï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø´ï¿½.
-	ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Äªï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½Äªï¿½ï¿½ï¿½Ø´ï¿½.
+	¿ÊÀ» ÇÑÁ¾·ùºÎÅÍ ¸ðµç Á¾·ù°£ÀÇ ¸ÅÄªÀ»ÇÏ¿© °öÇÏ°í ±× °öÇÑ°ÍÀ» ¸ðµÎ ´õÇØÁØ´Ù.
+	ÇöÀç ¸ÅÄªÁßÀÎ ¿ÊÁ¾·ù°¡ ¸ðµÎ ¿¬»êÀÌ ³¡ÀÌ³ª¸é Á¾·ù¸¦ ´Ã·Á¼­ ´Ù½Ã ¸ÅÄªÇØÁØ´Ù.
 
 
 	*/
@@ -751,14 +751,14 @@ void RecommendNewId()
 	std::string answer;
 
 	/*
-O	1ï¿½Ü°ï¿½ new_idï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ë¹®ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½Ò¹ï¿½ï¿½Ú·ï¿½ Ä¡È¯ï¿½Õ´Ï´ï¿½.
-O	2ï¿½Ü°ï¿½ new_idï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Äºï¿½ ï¿½Ò¹ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½(-), ï¿½ï¿½ï¿½ï¿½(_), ï¿½ï¿½Ä§Ç¥(.)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
-O	3ï¿½Ü°ï¿½ new_idï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä§Ç¥(.)ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½ï¿½ï¿½Óµï¿½ ï¿½Îºï¿½ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½ï¿½Ä§Ç¥(.)ï¿½ï¿½ Ä¡È¯ï¿½Õ´Ï´ï¿½.
-O	4ï¿½Ü°ï¿½ new_idï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä§Ç¥(.)ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½Ì³ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½Ñ´Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
-5ï¿½Ü°ï¿½ new_idï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½Ì¶ï¿½ï¿½, new_idï¿½ï¿½ "a"ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
-6ï¿½Ü°ï¿½ new_idï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ 16ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ì¸ï¿½, new_idï¿½ï¿½ Ã¹ 15ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
-	 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ä§Ç¥(.)ï¿½ï¿½ new_idï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½Ñ´Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½Ä§Ç¥(.) ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
-7ï¿½Ü°ï¿½ new_idï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ 2ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½, new_idï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ new_idï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ 3ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ýºï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
+O	1´Ü°è new_idÀÇ ¸ðµç ´ë¹®ÀÚ¸¦ ´ëÀÀµÇ´Â ¼Ò¹®ÀÚ·Î Ä¡È¯ÇÕ´Ï´Ù.
+O	2´Ü°è new_id¿¡¼­ ¾ËÆÄºª ¼Ò¹®ÀÚ, ¼ýÀÚ, »©±â(-), ¹ØÁÙ(_), ¸¶Ä§Ç¥(.)¸¦ Á¦¿ÜÇÑ ¸ðµç ¹®ÀÚ¸¦ Á¦°ÅÇÕ´Ï´Ù.
+O	3´Ü°è new_id¿¡¼­ ¸¶Ä§Ç¥(.)°¡ 2¹ø ÀÌ»ó ¿¬¼ÓµÈ ºÎºÐÀ» ÇÏ³ªÀÇ ¸¶Ä§Ç¥(.)·Î Ä¡È¯ÇÕ´Ï´Ù.
+O	4´Ü°è new_id¿¡¼­ ¸¶Ä§Ç¥(.)°¡ Ã³À½ÀÌ³ª ³¡¿¡ À§Ä¡ÇÑ´Ù¸é Á¦°ÅÇÕ´Ï´Ù.
+5´Ü°è new_id°¡ ºó ¹®ÀÚ¿­ÀÌ¶ó¸é, new_id¿¡ "a"¸¦ ´ëÀÔÇÕ´Ï´Ù.
+6´Ü°è new_idÀÇ ±æÀÌ°¡ 16ÀÚ ÀÌ»óÀÌ¸é, new_idÀÇ Ã¹ 15°³ÀÇ ¹®ÀÚ¸¦ Á¦¿ÜÇÑ ³ª¸ÓÁö ¹®ÀÚµéÀ» ¸ðµÎ Á¦°ÅÇÕ´Ï´Ù.
+	 ¸¸¾à Á¦°Å ÈÄ ¸¶Ä§Ç¥(.)°¡ new_idÀÇ ³¡¿¡ À§Ä¡ÇÑ´Ù¸é ³¡¿¡ À§Ä¡ÇÑ ¸¶Ä§Ç¥(.) ¹®ÀÚ¸¦ Á¦°ÅÇÕ´Ï´Ù.
+7´Ü°è new_idÀÇ ±æÀÌ°¡ 2ÀÚ ÀÌÇÏ¶ó¸é, new_idÀÇ ¸¶Áö¸· ¹®ÀÚ¸¦ new_idÀÇ ±æÀÌ°¡ 3ÀÌ µÉ ¶§±îÁö ¹Ýº¹ÇØ¼­ ³¡¿¡ ºÙÀÔ´Ï´Ù.
 */
 	for (auto i = new_id.begin(); i < new_id.end();)
 	{
@@ -958,8 +958,8 @@ void company_budget() {
 void control_string() {
 	std::string s = "015915";
 	bool answer = false;
-	//isdigitï¿½ï¿½ ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ 0ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
-	//digitï¿½ï¿½ ï¿½Ú¸ï¿½ï¿½ï¿½ 0~9ï¿½ï¿½ ï¿½Ç¹ï¿½ï¿½Ñ´ï¿½.
+	//isdigitÀº ¹®ÀÚ°¡ ¼ýÀÚÀÏ°æ¿ì 0À» ¸®ÅÏÇÑ´Ù.
+	//digitÀº ÀÚ¸´¼ö 0~9¸¦ ÀÇ¹ÌÇÑ´Ù.
 	if (s.length() >= 4 && s.length() <= 6) {
 		answer = !std::any_of(
 			s.begin(), s.end(), &isdigit);
@@ -981,13 +981,13 @@ void find_kim() {
 	{
 		if (seoul.at(i) == "Kim")
 		{
-			answer = "ï¿½è¼­ï¿½ï¿½ " + std::to_string(i) + "ï¿½ï¿½ ï¿½Ö´ï¿½";
+			answer = "±è¼­¹æ " + std::to_string(i) + "¿¡ ÀÖ´Ù";
 			break;
 		}
 	}
-	//distanceï¿½ï¿½ iteratorï¿½ï¿½ ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
+	//distance´Â iteratorÀÇ ±æÀÌ¸¦ ÀÎÆ®ÇüÀ¸·Î ¹ÝÈ¯ÇÑ´Ù.
 	int num = std::distance(seoul.begin(),std::find(seoul.begin(), seoul.end(), "Kim"));
-	answer = "ï¿½è¼­ï¿½ï¿½ " + std::to_string(num) + "ï¿½ï¿½ ï¿½Ö´ï¿½";
+	answer = "±è¼­¹æ " + std::to_string(num) + "¿¡ ÀÖ´Ù";
 
 	std::cout << answer.c_str() << std::endl;
 }
@@ -1300,7 +1300,7 @@ void DartGame() {
 	int answer = 0;
 	int val_size = 0;
 
-	//stringstreamï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Â°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø´ï¿½.
+	//stringstreamÀº ¹®ÀÚ¿­À» ÀÚ·áÇü¿¡ ¸Â°Ô Àû¿ëÇØÁØ´Ù.
 
 	for (auto i = dartResult.begin(); i != dartResult.end(); i++)
 	{
@@ -1348,7 +1348,7 @@ void MoreSpicy() {
 	int K = 30;
 	
 	int answer = 0;
-	//priority_queue ï¿½ì¼±ï¿½ï¿½ï¿½ï¿½ Å¥ 
+	//priority_queue ¿ì¼±¼øÀ§ Å¥ 
 	std::multiset<int> sort_scoville = { scoville.begin(), scoville.end() };
 
 	for (auto i = sort_scoville.begin(); i != std::prev(sort_scoville.end());)
@@ -1414,14 +1414,14 @@ void FibonacciRemainderMatrix() {
 	std::cout << "n = " << n << fibonacci(n);
 }
 /*
-* vector for ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ 
+* vector for ¾È »ç¿ëÇÏ±â 
 * std::copy(vi.begin(), vi.end(), std::ostream_iterator<int>(std::cout, " "));
 */
 
 /*
-* ï¿½ï¿½ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½Øºï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½é¼­ ï¿½ï¿½ï¿½Øºï¿½ï¿½ï¿½.
-* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Íµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø³ï¿½ï¿½ï¿½ ï¿½Æ´Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Â´ï¿½.
-* ï¿½×³ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½È°ï¿½Ø¼ï¿½ Ã£ï¿½Æºï¿½ï¿½Â°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.
+* ½ºÅØ ÇÏ³ª¸¦ ÁØºñÇÏ°í ¹®ÀÚ¿­ÀÇ °ªÀ» ÇÏ³ª¾¿ ³ÖÀ¸¸é¼­ ºñ±³ÇØº»´Ù.
+* ¸¸¾à °°Àº °ÍµéÀÌ ÀÖÀ» °æ¿ì µû·Î ÀúÀåÇØ³õ°í ¾Æ´Ï¸é ½ºÅØÀÌ ³Ö´Â´Ù.
+* ±×³É ¹®ÀÚ¿­À» ºÐÈ°ÇØ¼­ Ã£¾Æº¸´Â°Ô Çö¸íÇÏ´Ù.
 */
 /*
 * ababccccababccccccc
@@ -1430,107 +1430,29 @@ void FibonacciRemainderMatrix() {
 * 
 */
 void CompressionString() {
-	std::vector<std::string> vs = { 
-		"a" 
-		, "cccccccc"
-		, "aaacacaca"
-	};
-	//ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å­ ï¿½ß°ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½
-	vs[0].append(1000, 'a');
-	for (auto s : vs)
-	{
+	std::string s = "asdc";
 
 	int answer = s.size();
 
-	const int range = s.size();
-
-	int placenum = 0;
-
-	for (int i = 1; i <= range / 2; i++)
+	int range = s.size();
+	// i´Â viÀÇ ¾à¼ö¸¦ Ã£°í ±× ¾à¼ö¸¦ 
+	for (int i = 1; i * i <= range; i++)
 	{
-		bool befor = false;
-		int pressed = range;
+		if (range % i != 0) {
+			continue;
+		}
 
-		if (answer <= i)
+		int common[2] = {i, range / i};
+
+		for (int k = 0; k < common[0]; k++)
 		{
-			break;
 		}
 
-		for (int k = i; k + i <= range; k += i)
+		for (int k = 0; k < common[1]; k++)
 		{
-			if (s.substr(k, i) == s.substr(k - i, i))
-			{
-				befor = true;
-				pressed -= i;
-				++placenum;
-			}
-			else if (befor)
-			{
-				befor = false;
-				++pressed;
-				while ((placenum /= 10) > 0)
-				{
-					++pressed;
-				}
-			}
-		}
-		if (befor) {
-			++pressed;
-			while ((placenum /= 10) > 0)
-			{
-				++pressed;
-			}
-		}
-		if (answer > pressed)
-		{
-			answer = pressed;
+
 		}
 	}
 
-	std::cout << s << " = " << answer << std::endl;
 
-	}
-}
-namespace SmartPointer {
-
-	int Child1::GetNum() {
-		return num;
-	}
-	int Child2::GetNum() {
-		return num;
-	}
-	void SmartPointTest()
-	{
-		std::shared_ptr<Parent> One = ChildManager::GetOne();
-		std::shared_ptr<Parent> Two = ChildManager::GetTwo();
-		std::cout << "One = " << One->GetNum() << std::endl;
-		std::cout << "Two = " << One->GetNum() << std::endl;
-	}
-}
-
-
-namespace SingleTon {
-
-	Single* Single::GetInstnace() {
-		static Single* Sin = new Single();
-		return Sin;
-	}
-
-	void Single::UpNum() {
-		num++;
-	}
-	void Single::PrintNum() {
-		printf("%d\n", num);
-	}
-
-	void SingleTonTest1() {
-		Single::GetInstnace()->PrintNum();
-		Single::GetInstnace()->UpNum();
-		Single::GetInstnace()->PrintNum();
-	}
-	void SingleTonTest2() {
-		Single::GetInstnace()->PrintNum();
-		Single::GetInstnace()->UpNum();
-		Single::GetInstnace()->PrintNum();
-	}
 }
