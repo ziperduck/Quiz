@@ -25,12 +25,14 @@
     <ClInclude Include="MyString.h" />
     <ClInclude Include="MyThreadPool.h" />
     <ClInclude Include="Programers.h" />
+    <ClInclude Include="ReturnShared.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyComplex.cpp" />
     <ClCompile Include="MyExcel.cpp" />
     <ClCompile Include="MyString.cpp" />
     <ClCompile Include="Programers.cpp" />
+    <ClCompile Include="ReturnShared.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

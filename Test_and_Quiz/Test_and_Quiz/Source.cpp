@@ -6,6 +6,7 @@
 #include "MyComplex.h"
 #include "MyExcel.h"
 #include "Programers.h"
+#include "ReturnShared.h"
 
 int TestClass::public_static_val = 0;
 int TestClass::pri_static_val = 0;
@@ -1422,7 +1423,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	CompressionString();
+	TestReturnMakeShared();
 	return 0;
 }
 
