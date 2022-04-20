@@ -116,3 +116,9 @@ long long fibonacci(int n);
 void FibonacciRemainderMatrix();
 
 void CompressionString();
+
+//브루트 포스(해싱 알고리즘)
+int StringToHash(std::string String);
+
+//해시를 이용한 미완주자 찾기
+void UncompletedParticipant();

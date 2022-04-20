@@ -1423,20 +1423,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	int n = 5;
-	std::string Su_Back("¼ö¹Ú");
-	std::string answer;
-	for (int i = 0; i < n; i++) {
-		if (i % 2) {
-			answer.push_back(Su_Back[2]);
-			answer.push_back(Su_Back[3]);
-		}
-		else {
-			answer.push_back(Su_Back[0]);
-			answer.push_back(Su_Back[1]);
-		}
-	}
-	printf("%s\n", answer.c_str());
+	UncompletedParticipant();
 	return 0;
 }
 

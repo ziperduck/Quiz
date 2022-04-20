@@ -1456,3 +1456,56 @@ void CompressionString() {
 
 
 }
+
+//브루트 포스(해싱 알고리즘)
+int StringToHash(std::string String)
+{
+
+	constexpr int P = 2;
+	constexpr int M = 100;
+
+	int Hash_Value = 0;
+	int Pow_P = 1;
+
+	for (auto i : String)
+	{
+		Hash_Value = (Hash_Value + (i - 'a' + 1) * Pow_P) % M;
+		Pow_P = (P * Pow_P) % M;
+	}
+
+	printf("%s Hash Key = %d\n", String.c_str(), Hash_Value);
+
+	return Hash_Value;
+}
+
+//해시를 이용한 미완주자 찾기
+void UncompletedParticipant()
+{
+	std::vector<std::string> participant = {"kim","jin","hyeong"};
+	std::vector<std::string> completion = { "kim","jin" } ;
+
+	std::string answer;
+
+	bool Hash[100] = {false, };
+
+	constexpr int P = 2;
+	constexpr int M = 100;
+
+	for (auto i : completion)
+	{
+		Hash[StringToHash(i)] = true;
+	}
+
+	for (auto i : participant)
+	{
+		if (!Hash[StringToHash(i)])
+		{
+			printf("Find Participant %s\n", i.c_str());
+			return;
+		}
+	}
+	/*
+	* 해시를 이용해 participant(참가자)들의 정보들을 저장해 complention(완주자)들의 정보를 key값으로 입력해 찾자
+	*/
+
+}
