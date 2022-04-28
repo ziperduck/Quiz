@@ -117,8 +117,15 @@ void FibonacciRemainderMatrix();
 
 void CompressionString();
 
+
 //브루트 포스(해싱 알고리즘)
-int StringToHash(std::string String);
+int Programmers_StringToHash(std::string String);
 
 //해시를 이용한 미완주자 찾기
-void UncompletedParticipant();
+void Programmers_UncompletedParticipant();
+
+
+//프로그램 기능개발
+void Programmers_FunctionalDevelopment();
+
+void Programmers_MoreSpicy();

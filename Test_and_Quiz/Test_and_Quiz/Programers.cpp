@@ -1458,7 +1458,7 @@ void CompressionString() {
 }
 
 //브루트 포스(해싱 알고리즘)
-int StringToHash(std::string String)
+int Programmers_StringToHash(std::string String)
 {
 
 	constexpr int P = 2;
@@ -1479,7 +1479,7 @@ int StringToHash(std::string String)
 }
 
 //해시를 이용한 미완주자 찾기
-void UncompletedParticipant()
+void Programmers_UncompletedParticipant()
 {
 	std::vector<std::string> participant = {"kim","jin","hyeong"};
 	std::vector<std::string> completion = { "kim","jin" } ;
@@ -1493,12 +1493,12 @@ void UncompletedParticipant()
 
 	for (auto i : completion)
 	{
-		Hash[StringToHash(i)] = true;
+		Hash[Programmers_StringToHash(i)] = true;
 	}
 
 	for (auto i : participant)
 	{
-		if (!Hash[StringToHash(i)])
+		if (!Hash[Programmers_StringToHash(i)])
 		{
 			printf("Find Participant %s\n", i.c_str());
 			return;
@@ -1507,5 +1507,66 @@ void UncompletedParticipant()
 	/*
 	* 해시를 이용해 participant(참가자)들의 정보들을 저장해 complention(완주자)들의 정보를 key값으로 입력해 찾자
 	*/
+
+}
+
+//프로그램 기능개발
+void Programmers_FunctionalDevelopment()
+{
+
+	vector<int> progresses = { 93, 30, 55 };
+	vector<int> speeds = { 1, 30, 5 };
+
+	vector<int> answer;
+
+	for (int i = 0; i < progresses.size();)
+	{
+		float Remading = 100 - progresses.at(i);
+		int Days = ceil(Remading / speeds.at(i));
+
+		int PushProgress = 0;
+		while (i < progresses.size())
+		{
+			if (progresses.at(i) + speeds.at(i) * Days < 100)
+			{
+				break;
+			}
+			++i;
+			++PushProgress;
+		}
+
+		answer.push_back(PushProgress);
+	}
+
+
+}
+
+void Programmers_MoreSpicy()
+{
+	std::vector<int> scoville = {1,5,9,7,4,8,6,2,3,3,1,5,7,8,9};
+	int K = 0;
+
+	std::make_heap(scoville.begin(), scoville.end(), std::greater<int>());
+	for (int i = 0; i < 5; i++, K++)
+	{
+		printf("%d + %d *2 =  %d\n", scoville.at(0), scoville.at(1), scoville.at(0) + scoville.at(1) * 2);
+		scoville.push_back(scoville.at(0) + scoville.at(1) * 2);
+		scoville.erase(scoville.begin(), scoville.begin() + 1);
+		std::make_heap(scoville.begin(), scoville.end(), std::greater<int>());
+		for (int i = 0; i < scoville.size(); i++)
+		{
+			printf("%d, ", scoville.at(i));
+
+		}
+		printf("\n");
+
+	}
+	printf("\n");
+	for (int i = 0; i < scoville.size(); i++)
+	{
+		printf("%d, ", scoville.at(i));
+
+	}
+	printf("\n");
 
 }

@@ -1423,7 +1423,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	UncompletedParticipant();
+	Programmers_MoreSpicy();
 	return 0;
 }
 
