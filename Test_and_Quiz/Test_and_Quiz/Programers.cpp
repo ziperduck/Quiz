@@ -1543,29 +1543,40 @@ void Programmers_FunctionalDevelopment()
 
 void Programmers_MoreSpicy()
 {
-	std::vector<int> scoville = {1,5,9,7,4,8,6,2,3,3,1,5,7,8,9};
-	int K = 0;
+	std::vector<int> scoville = { 1000, 200000, 30000, 9000, 10000, 120000 };
+	int K = 1000000000;
+	int answer = 0;
 
-	std::make_heap(scoville.begin(), scoville.end(), std::greater<int>());
-	for (int i = 0; i < 5; i++, K++)
+	std::priority_queue<int,std::vector<int>,std::greater<int>> scoville_queue(scoville.begin(),scoville.end());
+
+	while (K < scoville_queue.top())
 	{
-		printf("%d + %d *2 =  %d\n", scoville.at(0), scoville.at(1), scoville.at(0) + scoville.at(1) * 2);
-		scoville.push_back(scoville.at(0) + scoville.at(1) * 2);
-		scoville.erase(scoville.begin(), scoville.begin() + 1);
-		std::make_heap(scoville.begin(), scoville.end(), std::greater<int>());
-		for (int i = 0; i < scoville.size(); i++)
-		{
-			printf("%d, ", scoville.at(i));
 
+		if (scoville_queue.size() == 1)
+		{
+			answer = -1;
+			break;
 		}
-		printf("\n");
+		int smallest = scoville_queue.top();
+		scoville_queue.pop();
+
+		int second = scoville_queue.top();
+		scoville_queue.pop();
+
+		scoville_queue.push(smallest + second * 2);
+
+		++answer;
 
 	}
-	printf("\n");
-	for (int i = 0; i < scoville.size(); i++)
-	{
-		printf("%d, ", scoville.at(i));
 
+	printf("answer = %d ", answer);
+
+	printf("\n");	
+	
+	for (int i = 0; !scoville_queue.empty(); i++)
+	{
+		printf("%lu, ", scoville_queue.top());
+		scoville_queue.pop();
 	}
 	printf("\n");
 
