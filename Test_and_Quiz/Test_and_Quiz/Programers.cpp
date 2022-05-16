@@ -1582,6 +1582,55 @@ void Programmers_MoreSpicy()
 
 }
 
+
+bool Programmers_CompareCombineNumber(int i,int j)
+{
+	int JI = 0;
+	if (i == 1000)
+	{
+		JI += j * 10000;
+		JI += i;
+	}
+	else if (i < 10)
+	{
+		JI += j * 10;
+		JI += i;
+	}
+	else if (i < 100)
+	{
+		JI += j * 100;
+		JI += i;
+	}
+	else if (i < 1000)
+	{
+		JI += j * 1000;
+		JI += i;
+	}
+
+	int IJ = 0;
+	if (j == 1000)
+	{
+		IJ += i * 10000;
+		IJ += j;
+	}
+	else if (j < 10)
+	{
+		IJ += i * 10;
+		IJ += j;
+	}
+	else if (j < 100)
+	{
+		IJ += i * 100;
+		IJ += j;
+	}
+	else if (j < 1000)
+	{
+		IJ += i * 1000;
+		IJ += j;
+	}
+	return JI < IJ;
+}
+
 void Programmers_BiggestNumber()
 {
 	/*
@@ -1613,7 +1662,24 @@ void Programmers_BiggestNumber()
 	* 31  5
 	* 
 	*/
-	vector<int> numbers;
+
+	vector<int> numbers = {0,0,0};
+	if (std::all_of(numbers.begin(), numbers.end(), [](int i) {return i == 0;}))
+	{
+
+	}
+
 	std::string answer = "";
 
+	std::sort(numbers.begin(), numbers.end(), Programmers_CompareCombineNumber);
+
+	std::stringstream NumbersStream;
+
+	for (auto i = numbers.begin(); i < numbers.end(); i++)
+	{
+		NumbersStream << *i;
+	}
+	printf("%s\n", NumbersStream.str().c_str());
+	
+	std::sort(numbers.begin(), numbers.end(), Programmers_CompareCombineNumber);
 }

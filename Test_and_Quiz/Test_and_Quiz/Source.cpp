@@ -1423,7 +1423,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_MoreSpicy();
+	Programmers_BiggestNumber();
 	return 0;
 }
 
