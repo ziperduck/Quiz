@@ -133,3 +133,7 @@ void Programmers_MoreSpicy();
 
 //제일 큰수
 void Programmers_BiggestNumber();
+
+
+//소수 찾기
+void Programmers_FindPrimeNumber();

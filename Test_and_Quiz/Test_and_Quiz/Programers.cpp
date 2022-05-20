@@ -1683,3 +1683,24 @@ void Programmers_BiggestNumber()
 	
 	std::sort(numbers.begin(), numbers.end(), Programmers_CompareCombineNumber);
 }
+
+
+//소수 찾기
+void Programmers_FindPrimeNumber()
+{
+	bool onemillionarray[100000] = { true,true, };
+	for (int i = 2; i < 100; i++)
+	{
+		for (int  k= 2; k < 1000; k++)
+		{
+			onemillionarray[i * k] = true;
+		}
+	}
+	for (int i = 0; i < 98902; i++)
+	{
+		if (!onemillionarray[i])
+		{
+			printf("%d, ", i);
+		}
+	}
+}
