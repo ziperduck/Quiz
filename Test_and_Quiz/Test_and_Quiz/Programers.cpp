@@ -1686,21 +1686,31 @@ void Programmers_BiggestNumber()
 
 
 //소수 찾기
+//자리수에 맞게 소수만 찾으면 되지 않을까 싶다.
+//0일때 체크
+
 void Programmers_FindPrimeNumber()
 {
-	bool onemillionarray[100000] = { true,true, };
-	for (int i = 2; i < 100; i++)
+	std::string numbers;
+	int answer = 0;
+	
+	std::vector<int> intnumbers;
+	
+	std::set<int> PrimeNumberCount;
+
+	for (int i = 0; i < numbers.size(); i++)
 	{
-		for (int  k= 2; k < 1000; k++)
+		intnumbers.push_back(numbers[i] - '0');
+	}
+	
+	for (int i = 0; i < numbers.size(); i++)
+	{
+		for (int k = 0; k < numbers.size(); k++)
 		{
-			onemillionarray[i * k] = true;
+
 		}
 	}
-	for (int i = 0; i < 98902; i++)
-	{
-		if (!onemillionarray[i])
-		{
-			printf("%d, ", i);
-		}
-	}
+
+	answer = PrimeNumberCount.size();
+
 }
