@@ -137,3 +137,12 @@ void Programmers_BiggestNumber();
 
 //소수 찾기
 void Programmers_FindPrimeNumber();
+
+//부족한 금액
+void Programmers_InsufficientPrice();
+
+//ID 신고
+void Programmers_ReportID();
+
+//숫자 문자열 영단어
+void Programmers_StringNumber();

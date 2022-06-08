@@ -1714,3 +1714,100 @@ void Programmers_FindPrimeNumber()
 	answer = PrimeNumberCount.size();
 
 }
+
+void Programmers_InsufficientPrice()
+{
+	long price = 2500;
+	long money = 100000000;
+	long count = 2500;
+
+	long long answer = count* (count + 1) / 2 ;
+	answer *= price;
+	answer -=money;
+	if (answer	< 0)
+	{
+		answer = 0;
+	}
+}
+
+void Programmers_ReportID()
+{
+	std::vector<std::string> id_list = { "muzi", "frodo", "apeach", "neo" };
+	std::vector<std::string> report = { "muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi" };
+	int k = 2;
+
+	std::vector<int> answer = std::vector<int>(id_list.size());
+
+	std::map<std::string, std::set<std::string>> Distribut_ID;
+
+	/*
+
+	누가누구를 신고했는가?
+	신고당한 사람은 K를 넘겼는가?
+	누구한테 메일을 보내야하는지?
+	*/
+	for (auto i : report )
+	{
+		std::stringstream StreamReportId;
+		StreamReportId.str(i);
+
+		std::string id;
+		std::string reportid;
+		StreamReportId >> id;
+		StreamReportId >> reportid;
+
+		Distribut_ID[reportid].insert(id);
+	}
+
+	for (auto i : Distribut_ID)
+	{
+		if (k > i.second.size())
+		{
+			continue;
+		}
+		for (auto n : i.second)
+		{
+			auto id_element = std::find(id_list.begin(), id_list.end(), n);
+			++answer.at(std::distance(id_list.begin(), id_element));
+		}
+
+	}
+
+}
+
+void Programmers_StringNumber()
+{
+	std::string s = "one4seveneight";
+
+	std::map<std::string, int> stingnummap
+		= { {"zero",0},{"one",1}, {"two",2}, {"three",3}, {"four",4}, {"five",5}, {"six",6}, {"seven",7}, {"eight",8}, {"nine",9} };
+
+	int answer = 0;
+
+	for (int i = 0; i < s.size(); i++)
+	{
+		int num = 0;
+		if ('9' >= s.at(i))
+		{
+			num = s.at(i) - '0';
+		}
+		else
+		{
+			std::string stringnum;
+			while (true)
+			{
+				stringnum.push_back(s.at(i));
+				if (stingnummap.find(stringnum) != stingnummap.end())
+				{
+					num = stingnummap[stringnum];
+					break;
+				}
+				i++;
+			}
+		}
+		answer = answer * 10 + num;
+	
+	}
+	printf("answer %d \n", answer);
+}
+

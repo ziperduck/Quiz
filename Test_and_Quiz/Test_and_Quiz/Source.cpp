@@ -1423,7 +1423,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_FindPrimeNumber();
+	Programmers_StringNumber();
 	return 0;
 }
 
