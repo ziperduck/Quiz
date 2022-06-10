@@ -146,3 +146,6 @@ void Programmers_ReportID();
 
 //숫자 문자열 영단어
 void Programmers_StringNumber();
+
+//없는 숫자
+void Programmers_WithoutNumber();

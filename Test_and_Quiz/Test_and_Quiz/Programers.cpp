@@ -1811,3 +1811,13 @@ void Programmers_StringNumber()
 	printf("answer %d \n", answer);
 }
 
+
+//없는 숫자
+void Programmers_WithoutNumber()
+{
+	vector<int> numbers = { 1,2,3,4,6,7,8,0 };
+
+	// 0~9 = 45
+	int answer = std::accumulate(numbers.begin(), numbers.end(), 0);
+	printf("%d\n", answer);
+}

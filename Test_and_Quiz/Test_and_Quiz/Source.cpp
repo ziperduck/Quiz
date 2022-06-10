@@ -1423,7 +1423,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_StringNumber();
+	Programmers_WithoutNumber();
 	return 0;
 }
 
