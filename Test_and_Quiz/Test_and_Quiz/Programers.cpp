@@ -1821,3 +1821,56 @@ void Programmers_WithoutNumber()
 	int answer = std::accumulate(numbers.begin(), numbers.end(), 0);
 	printf("%d\n", answer);
 }
+
+//문자열 압축
+void Programmers_CompressionString()
+{
+	std::string s = "abcabcdede";
+	std::string compressstring;
+
+	int answer = s.size();
+	
+	int halflength = s.size() / 2;
+	for (int i = 1;i<= halflength;i++)
+	{
+
+		std::string substring = s.substr(0, i);
+		int repetitioncount = 0;
+
+		for (int k = i; k < s.size() ;k += i)
+		{
+
+			if (s.substr(k, i).compare(substring) == 0)
+			{
+				++repetitioncount;
+				continue;
+			}
+
+			if (repetitioncount > 0)
+			{
+				compressstring.append(std::to_string(repetitioncount + 1));
+			}
+
+			compressstring.append(substring);
+			substring = s.substr(k, i);
+			repetitioncount = 0;
+		}
+
+		if (repetitioncount > 0)
+		{
+			compressstring.append(std::to_string(repetitioncount + 1));
+		}
+		compressstring.append(substring);
+
+		printf("Candidate %d : %s\n", i, compressstring.c_str());
+	
+		if (answer > compressstring.size())
+		{
+			answer = compressstring.size();
+		}
+
+		compressstring.clear();
+
+	}
+	
+}
