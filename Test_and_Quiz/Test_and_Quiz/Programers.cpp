@@ -1874,3 +1874,57 @@ void Programmers_CompressionString()
 	}
 	
 }
+
+void Programmers_OpenChatting()
+{
+	/*
+	* Change를 찾아서 id 번호의 닉네임을 매칭해놓는다.
+	* change를 찾을경우 문자열에서 뺀다.
+	* enter와 leave도 매칭을 해놓는다.
+	* change에서 닉네임이 변하지 않은 나중에 enter와 leave를 매칭할때 id변화와 닉네임을 매칭해놓은 map에 추가해놓는다.
+	*/
+
+	std::vector<std::string> record{ "Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid1234 Prodo","Change uid4567 Ryan" };
+	std::vector<std::string> answer{};
+
+	std::vector<std::string> ActionList{};
+	std::vector<std::string> IDList{};
+
+	std::map<std::string, std::string> MapNickname{};
+	std::map<std::string, std::string> MapAction{ {"Enter","님이 들어왔습니다."}, {"Leave","님이 나갔습니다."} };
+
+	for (auto i : record)
+	{
+		std::stringstream RecordStream{i};
+		
+		std::string Action{};
+		std::string UserID{};
+		std::string Nickname{};
+
+		RecordStream >> Action;
+		RecordStream >> UserID;
+
+		if (MapAction.find(Action) != MapAction.end())
+		{
+			IDList.push_back(UserID);
+			ActionList.push_back(MapAction[Action]);
+		}
+		
+		RecordStream >> Nickname;
+		if (Nickname.compare("") != 0)
+		{
+			MapNickname[UserID] = Nickname;
+		}
+	
+	}
+	for (int i = 0; i < ActionList.size();i++)
+	{
+		answer.push_back(MapNickname[IDList.at(i)] + ActionList.at(i));
+	}
+
+	for (auto i : answer)
+	{
+		printf("%s\n", i.c_str());
+	}
+
+}

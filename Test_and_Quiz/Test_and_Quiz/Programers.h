@@ -152,3 +152,6 @@ void Programmers_WithoutNumber();
 
 //문자열 압축
 void Programmers_CompressionString();
+
+//오픈채팅방
+void Programmers_OpenChatting();

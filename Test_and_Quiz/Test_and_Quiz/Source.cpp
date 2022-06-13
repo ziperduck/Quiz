@@ -1423,7 +1423,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_CompressionString();
+	Programmers_OpenChatting();
 	return 0;
 }
 
