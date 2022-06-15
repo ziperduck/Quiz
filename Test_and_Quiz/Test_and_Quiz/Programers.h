@@ -155,3 +155,6 @@ void Programmers_CompressionString();
 
 //오픈채팅방
 void Programmers_OpenChatting();
+
+// 컬러링북
+void Programmers_ColoringBook();
