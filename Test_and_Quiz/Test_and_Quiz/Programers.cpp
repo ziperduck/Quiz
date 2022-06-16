@@ -1943,3 +1943,9 @@ void Programmers_ColoringBook()
 
 
 }
+
+//단체 사진
+void Programmers_GroupPoto()
+{
+
+}
