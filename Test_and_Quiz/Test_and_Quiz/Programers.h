@@ -161,3 +161,7 @@ void Programmers_ColoringBook();
 
 //단체 사진
 void Programmers_GroupPoto();
+
+//타겟넘버
+void Programmers_TargetNumber();
+

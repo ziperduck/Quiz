@@ -1949,3 +1949,24 @@ void Programmers_GroupPoto()
 {
 
 }
+
+//타겟넘버
+void Programmers_TargetNumber()
+{
+	/*깊이 / 너비 우선 탐색
+	* numbers에 -2를 곱해 전체 주를 빼가며 값을 구하려고한다.
+	*/
+
+	std::vector<int> numbers; 
+	int target;
+	int answer = 0;
+
+	for (int i = 1;i< numbers.size();i++)
+	{
+		for (int k = 0;k< numbers.size();k++)
+		{
+
+		}
+	}
+
+}
