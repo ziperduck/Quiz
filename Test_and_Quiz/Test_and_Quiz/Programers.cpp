@@ -1957,15 +1957,46 @@ void Programmers_TargetNumber()
 	* numbers에 -2를 곱해 전체 주를 빼가며 값을 구하려고한다.
 	*/
 
-	std::vector<int> numbers; 
-	int target;
+	std::vector<int> numbers = {0,1};
+	int target = 0;
 	int answer = 0;
+	
+	int NumversSum = std::accumulate(numbers.begin(), numbers.end(), 0);
 
-	for (int i = 1;i< numbers.size();i++)
+	/*
+	* 깊이로 들어가는 로직
+	* 다시 뒤로 갈수도 있어야한다
+	* 
+	* 한 원소를 선택한다.
+	* 그 원소에서 기준으로 오른쪽수들을 합쳐서 뺸다.
+	* 만약 뺀 값이 타겟과 같거나 작을경우 다음 값으로 넘어간다.
+	* 
+	* 지금 실행할 원소 위치
+	* 
+	*/
+
+	int MinusSum = 0;
+	for (int i = 0; i < numbers.size();)
 	{
-		for (int k = 0;k< numbers.size();k++)
+		for (int k =i; k < numbers.size();)
 		{
+			MinusSum -= numbers.at(k);
 
+			if (NumversSum + MinusSum * 2> target)
+			{
+			}
+			else
+			{
+
+				if (NumversSum + MinusSum * 2 == target)
+				{
+					++answer;
+				}
+
+				MinusSum += numbers.at(k);
+				i++;
+			}
+			i++;
 		}
 	}
 
