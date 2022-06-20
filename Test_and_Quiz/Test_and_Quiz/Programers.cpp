@@ -1929,6 +1929,64 @@ void Programmers_OpenChatting()
 
 }
 
+//짝지어 제거하기
+void Programmers_PairDelete()
+{
+	std::string s{"adabccbd"};
+	std::list<char> li { s.begin(),s.end() };
+	int answer = -1;
+
+	/*
+	* 문자열에서 같은 알파벳이 2개 붙어있는 짝을 찾아서 문자열 모두를 제거가능하지 리턴해야한다.
+	* 문자열 쌍을 찾는 방법은 for문이 생각난다.
+	* unique의 경우 문자가 하나 남기 때문에 소용없다.
+	* 모두 같은 문자일경우
+	* list를 이용했지만 이게 아닌것 같다.
+	* 에러도 뜨고 시간초과도 된다.
+	*/
+	//erase를이용한 s제거
+	//for (auto i = s.begin(); i < s.end()-1;)
+	//{
+	//
+	//	if (*i == *(i+1))
+	//	{
+	//		printf("%c == %c\n", *i, *(i + 1));
+	//		i = s.erase(i , i + 2);
+	//		--i;
+	//		continue;
+	//	}
+	//
+	//	++i;
+	//
+	//	printf("s = %s\n", s.c_str());
+	//}
+	//
+	//if (s.size() > 0)
+	//{
+	//	answer = 0;
+	//}
+	
+	auto after = li.begin();
+	auto befor = after;
+	++after;
+
+	for (; after != li.end();)
+	{
+		if (*befor == *after)
+		{
+			li.erase(befor--, ++after);
+			continue;
+		}
+
+
+		befor = after;
+		++after;
+	}
+}
+
+
+//못 푼 문제
+
 // 컬러링북
 void Programmers_ColoringBook()
 {
@@ -1999,5 +2057,25 @@ void Programmers_TargetNumber()
 			i++;
 		}
 	}
+
+}
+
+//위장
+void Programmers_Camouflage()
+{
+	/*
+	* 옷들의 값을 하나씩 종류별를 구분합니다.
+	* 중복된 옷의 종류가 있을경우 카운트를 샙니다.
+	*/
+	std::vector<std::vector<std::string>> clothes;
+	std::map<std::string, int> sortclothes;
+
+	int answer = 1;
+
+	for (auto Cloth : clothes)
+	{
+		++sortclothes[Cloth.back()];
+	}
+
 
 }

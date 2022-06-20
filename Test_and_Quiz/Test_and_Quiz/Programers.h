@@ -156,6 +156,11 @@ void Programmers_CompressionString();
 //오픈채팅방
 void Programmers_OpenChatting();
 
+//짝지어 제거하기
+void Programmers_PairDelete();
+
+//못 푼 문제
+
 // 컬러링북
 void Programmers_ColoringBook();
 
@@ -164,4 +169,7 @@ void Programmers_GroupPoto();
 
 //타겟넘버
 void Programmers_TargetNumber();
+
+//위장
+void Programmers_Camouflage();
 
