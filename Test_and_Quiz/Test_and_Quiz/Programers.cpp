@@ -1932,8 +1932,7 @@ void Programmers_OpenChatting()
 //짝지어 제거하기
 void Programmers_PairDelete()
 {
-	std::string s{"adabccbd"};
-	std::list<char> li { s.begin(),s.end() };
+	std::string s{"baabaa"};
 	int answer = -1;
 
 	/*
@@ -1951,7 +1950,8 @@ void Programmers_PairDelete()
 	//	if (*i == *(i+1))
 	//	{
 	//		printf("%c == %c\n", *i, *(i + 1));
-	//		i = s.erase(i , i + 2);
+	//		std::swap(s.back(),i)
+	//		i = s.erase(std::remove(i , i + 1,*i),s.end());
 	//		--i;
 	//		continue;
 	//	}
@@ -1966,22 +1966,49 @@ void Programmers_PairDelete()
 	//	answer = 0;
 	//}
 	
-	auto after = li.begin();
-	auto befor = after;
-	++after;
+	//list를 이용한 방법
+	//std::list<char> li { s.begin(),s.end() };
+	//auto after = li.begin();
+	//auto befor = after;
+	//++after;
+	//
+	//for (; after != li.end();)
+	//{
+	//	if (*befor == *after)
+	//	{
+	//		li.
+	//		std::remove(befor, ++after,*befor);
+	//		continue;
+	//	}
+	//for (auto k = li.begin(); k != li.end();k++)
+	//{
+	//	printf("%c", *k);
+	//}
+	//printf("\n");
+	//
+	//	befor = after;
+	//	++after;
+	//}
 
-	for (; after != li.end();)
-	{
-		if (*befor == *after)
-		{
-			li.erase(befor--, ++after);
-			continue;
-		}
+	//굳이 지울필요 없이 befor과 after의 가장 멀리 간 위치를 확인하고 좌우 끝일경우 true를 리턴하자
+	//for (auto after = s.begin() + 1, previous = s.begin(); after < s.end();)
+	//{
+	//	if (*previous == *after)
+	//	{
+	//		if (previous != s.begin())
+	//		{
+	//			--previous;
+	//		}
+	//		++after;
+	//		continue;
+	//	}
+	//	
+	//	
+	//	previous = after;
+	//	++after;
+	//}
+	//printf("Left = %d, Right = %d\n", std::distance(s.begin(), LeftMost), std::distance(s.begin(), RightMost));
 
-
-		befor = after;
-		++after;
-	}
 }
 
 
