@@ -2009,6 +2009,40 @@ void Programmers_PairDelete()
 	//}
 	//printf("Left = %d, Right = %d\n", std::distance(s.begin(), LeftMost), std::distance(s.begin(), RightMost));
 
+	std::string::iterator  previous = s.begin();
+	std::string::iterator after = previous +1;
+	//vector 를 하나 만들어서 true false 로 검사할것이다.
+	while (after < s.end())
+	{
+		if (*previous == '\0')
+		{
+			while (previous != s.begin())
+			{
+
+			}
+		}
+		if (*after == '\0')
+		{
+			while (after != s.begin())
+			{
+
+			}
+		}
+
+		if (*previous == *after)
+		{
+
+		}
+		
+
+
+	}
+	
+	if (s.size() > 0)
+	{
+		answer = 0;
+	}
+	
 }
 
 
