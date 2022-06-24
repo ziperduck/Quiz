@@ -1932,7 +1932,7 @@ void Programmers_OpenChatting()
 //짝지어 제거하기
 void Programmers_PairDelete()
 {
-	std::string s{"baabaa"};
+	std::string s{"ca"};
 	int answer = -1;
 
 	/*
@@ -2011,34 +2011,27 @@ void Programmers_PairDelete()
 
 	std::string::iterator  previous = s.begin();
 	std::string::iterator after = previous +1;
-	//vector 를 하나 만들어서 true false 로 검사할것이다.
 	while (after < s.end())
 	{
-		if (*previous == '\0')
-		{
-			while (previous != s.begin())
-			{
-
-			}
-		}
-		if (*after == '\0')
-		{
-			while (after != s.begin())
-			{
-
-			}
-		}
 
 		if (*previous == *after)
 		{
-
+			*previous = ' ';
+			*after = ' ';
 		}
-		
 
-
+		if (*previous != ' ')
+		{
+			previous = after;
+		}
+		++after;
+		while (*previous == ' ' && previous != s.begin())
+		{
+			--previous;
+		}
 	}
-	
-	if (s.size() > 0)
+
+	if (previous != s.begin() || after != s.end())
 	{
 		answer = 0;
 	}
