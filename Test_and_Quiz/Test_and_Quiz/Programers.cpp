@@ -1932,7 +1932,7 @@ void Programmers_OpenChatting()
 //짝지어 제거하기
 void Programmers_PairDelete()
 {
-	std::string s{"ca"};
+	std::string s{ "ca" };
 	int answer = -1;
 
 	/*
@@ -1965,52 +1965,55 @@ void Programmers_PairDelete()
 	//{
 	//	answer = 0;
 	//}
-	
-	//list를 이용한 방법
-	//std::list<char> li { s.begin(),s.end() };
-	//auto after = li.begin();
-	//auto befor = after;
-	//++after;
-	//
-	//for (; after != li.end();)
-	//{
-	//	if (*befor == *after)
-	//	{
-	//		li.
-	//		std::remove(befor, ++after,*befor);
-	//		continue;
-	//	}
-	//for (auto k = li.begin(); k != li.end();k++)
-	//{
-	//	printf("%c", *k);
-	//}
-	//printf("\n");
-	//
-	//	befor = after;
-	//	++after;
-	//}
+	/*
+	list를 이용한 방법
+	std::list<char> li { s.begin(),s.end() };
+	auto after = li.begin();
+	auto befor = after;
+	++after;
 
-	//굳이 지울필요 없이 befor과 after의 가장 멀리 간 위치를 확인하고 좌우 끝일경우 true를 리턴하자
-	//for (auto after = s.begin() + 1, previous = s.begin(); after < s.end();)
-	//{
-	//	if (*previous == *after)
-	//	{
-	//		if (previous != s.begin())
-	//		{
-	//			--previous;
-	//		}
-	//		++after;
-	//		continue;
-	//	}
-	//	
-	//	
-	//	previous = after;
-	//	++after;
-	//}
-	//printf("Left = %d, Right = %d\n", std::distance(s.begin(), LeftMost), std::distance(s.begin(), RightMost));
+	for (; after != li.end();)
+	{
+		if (*befor == *after)
+		{
+			li.
+			std::remove(befor, ++after,*befor);
+			continue;
+		}
+	for (auto k = li.begin(); k != li.end();k++)
+	{
+		printf("%c", *k);
+	}
+	printf("\n");
 
+		befor = after;
+		++after;
+	}
+	*/
+
+	/*굳이 지울필요 없이 befor과 after의 가장 멀리 간 위치를 확인하고 좌우 끝일경우 true를 리턴하자
+	for (auto after = s.begin() + 1, previous = s.begin(); after < s.end();)
+	{
+		if (*previous == *after)
+		{
+			if (previous != s.begin())
+			{
+				--previous;
+			}
+			++after;
+			continue;
+		}
+
+
+		previous = after;
+		++after;
+	}
+	printf("Left = %d, Right = %d\n", std::distance(s.begin(), LeftMost), std::distance(s.begin(), RightMost));
+	*/
+
+	/*
 	std::string::iterator  previous = s.begin();
-	std::string::iterator after = previous +1;
+	std::string::iterator after = previous + 1;
 	while (after < s.end())
 	{
 
@@ -2035,7 +2038,25 @@ void Programmers_PairDelete()
 	{
 		answer = 0;
 	}
+	*/
+
+	std::vector<char> clist;
+	clist.push_back(s.back());
+	s.pop_back();
 	
+	while (s.size() > 0)
+	{
+		char ch = clist.back();
+		clist.push_back(s.back());
+		s.pop_back();
+		if(ch == clist.back())
+		{
+			clist.pop_back();
+			clist.pop_back();
+		}
+
+	}
+
 }
 
 
