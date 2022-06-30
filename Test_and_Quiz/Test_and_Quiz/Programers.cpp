@@ -2083,6 +2083,27 @@ void Programmers_GroupPoto()
 
 }
 
+int Programmers_DeepFirstSearch(std::vector<int> Numbers, int Starting,int Sub, int Accum, int Target)
+{
+	int SameCount = 0;
+	for (int i = Starting;i< Numbers.size();i++)
+	{
+		//곱을 해줘야 뺄셈의 총합이 됩니다.
+		int SubSum = (Sub + Numbers.at(i));
+
+		if (Accum - SubSum * 2 > Target)
+		{
+			SameCount += Programmers_DeepFirstSearch(Numbers, i+1, SubSum, Accum, Target);
+		}
+		
+		if(Accum - SubSum * 2 == Target)
+		{
+			++SameCount;
+		}
+
+	}
+	return SameCount;
+}
 //타겟넘버
 void Programmers_TargetNumber()
 {
@@ -2090,11 +2111,11 @@ void Programmers_TargetNumber()
 	* numbers에 -2를 곱해 전체 주를 빼가며 값을 구하려고한다.
 	*/
 
-	std::vector<int> numbers = {0,1};
-	int target = 0;
+	std::vector<int> numbers = {4,1,2,1};
+	int target = 4;
 	int answer = 0;
 	
-	int NumversSum = std::accumulate(numbers.begin(), numbers.end(), 0);
+	int accum = std::accumulate(numbers.begin(), numbers.end(), 0);
 
 	/*
 	* 깊이로 들어가는 로직
@@ -2108,6 +2129,7 @@ void Programmers_TargetNumber()
 	* 
 	*/
 
+	/*
 	int MinusSum = 0;
 	for (int i = 0; i < numbers.size();)
 	{
@@ -2132,7 +2154,8 @@ void Programmers_TargetNumber()
 			i++;
 		}
 	}
-
+	*/
+	printf("Count = %d \n",Programmers_DeepFirstSearch(numbers, 0, 0, accum, target));
 }
 
 //위장

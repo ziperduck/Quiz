@@ -1423,7 +1423,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_PairDelete();
+	Programmers_TargetNumber();
 	return 0;
 }
 
