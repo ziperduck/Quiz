@@ -1423,7 +1423,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_TargetNumber();
+	Programmers_Camouflage();
 	return 0;
 }
 

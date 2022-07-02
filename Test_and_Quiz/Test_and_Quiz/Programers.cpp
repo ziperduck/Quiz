@@ -2165,15 +2165,33 @@ void Programmers_Camouflage()
 	* 옷들의 값을 하나씩 종류별를 구분합니다.
 	* 중복된 옷의 종류가 있을경우 카운트를 샙니다.
 	*/
-	std::vector<std::vector<std::string>> clothes;
-	std::map<std::string, int> sortclothes;
+	std::vector<std::vector<std::string>> clothes{
+		{"yellow_hat", "headgear"}
+	,{"blue_sunglasses", "eyewear"}
+		,{"green_turban", "headgear"} };
+
+	std::map<std::string, int> clothetype;
 
 	int answer = 1;
 
 	for (auto Cloth : clothes)
 	{
-		++sortclothes[Cloth.back()];
+		++clothetype[Cloth.back()];
 	}
 
+	//비트를 사용해서 해봅시다.
+	int bit = 1 << clothetype.size();
+
+	for (int i = 1;i <= bit;i++)
+	{
+		int mull = 1;
+		for (int k = 0;k< i;k++)
+		{
+			if (i & (1 << k))
+			{
+			}
+		}
+
+	}
 
 }
