@@ -2172,7 +2172,7 @@ void Programmers_Camouflage()
 
 	std::map<std::string, int> clothetype;
 
-	int answer = 1;
+	int answer = 0;
 
 	for (auto Cloth : clothes)
 	{
@@ -2180,18 +2180,30 @@ void Programmers_Camouflage()
 	}
 
 	//비트를 사용해서 해봅시다.
-	int bit = 1 << clothetype.size();
 
-	for (int i = 1;i <= bit;i++)
+	int bitsize = 1 << clothetype.size();
+	for (int i = 1;i < bitsize;i++)
 	{
 		int mull = 1;
-		for (int k = 0;k< i;k++)
+		auto it = clothetype.begin();
+		for (int k = 0;k< clothetype.size();k++)
 		{
-			if (i & (1 << k))
+			int bit = 1 << k;
+			if (i < bit)
 			{
+				break;
 			}
+
+			if (i & bit)
+			{
+				mull *= it->second;
+			}
+			++it;
 		}
+		answer += mull;
 
 	}
+
+	printf("answer = %d\n", answer);
 
 }
