@@ -159,6 +159,9 @@ void Programmers_OpenChatting();
 //짝지어 제거하기
 void Programmers_PairDelete();
 
+//최소 직사각형
+void MinimumRectangle();
+
 //못 푼 문제
 
 // 컬러링북
@@ -172,4 +175,3 @@ void Programmers_TargetNumber();
 
 //위장
 void Programmers_Camouflage();
-

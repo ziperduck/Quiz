@@ -2059,6 +2059,22 @@ void Programmers_PairDelete()
 
 }
 
+void MinimumRectangle()
+{
+	vector<vector<int>> sizes{ {60, 50} ,{30, 70},{60, 30},{80, 40} };
+	int answer = 0;
+	int Bigger[2] = { 0,0 };
+	for (auto i : sizes)
+	{
+		if (i.front() < i.back())
+		{
+			std::swap(i[0], i[1]);
+		}
+		Bigger[0] = Bigger[0] < i.front() ? i.front() : Bigger[0];
+		Bigger[1] = Bigger[1] < i.back() ? i.back() : Bigger[1];
+	}
+	answer = Bigger[0] * Bigger[1];
+}
 
 //¸ø Ç¬ ¹®Á¦
 

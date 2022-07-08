@@ -1423,7 +1423,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_Camouflage();
+	MinimumRectangle();
 	return 0;
 }
 
