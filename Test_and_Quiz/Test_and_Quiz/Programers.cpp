@@ -2086,9 +2086,14 @@ void Programmers_ColoringBook()
 	int number_of_area = 0;
 	int max_size_of_one_area = 0;
 
-	vector<int> answer(2);
-	answer[0] = number_of_area;
-	answer[1] = max_size_of_one_area;
+	/*
+	* 두가지 이중배열을 만든다
+	* 하나는 전체를 검사하는 채크리스트
+	* 두번째는 현재 검사하고여 같은색깔을 채크하는 리스트
+	* 
+	* for문의 경우 전체를 도는 큰 for문과 4방을 검사하는 for문을 검사합니다.
+	*/
+	std::vector<std::vector<bool>> checklist;
 
 
 }
