@@ -2081,8 +2081,8 @@ void MinimumRectangle()
 // 컬러링북
 void Programmers_ColoringBook()
 {
-	int m; int n;
-	vector<vector<int>> picture;
+	int m = 0; int n = 0;
+	vector<vector<int>> picture = { {1,2},{3,4} };
 	int number_of_area = 0;
 	int max_size_of_one_area = 0;
 
@@ -2092,9 +2092,14 @@ void Programmers_ColoringBook()
 	* 두번째는 현재 검사하고여 같은색깔을 채크하는 리스트
 	* 
 	* for문의 경우 전체를 도는 큰 for문과 4방을 검사하는 for문을 검사합니다.
+	* 
+	* 반복자를 통해 서 row가 이동하면 column도 이동시키고싶었지만 안된다.
 	*/
-	std::vector<std::vector<bool>> checklist;
+	
+	for (int row = 0,column = 0; row < m && column < n;)
+	{
 
+	}
 
 }
 
@@ -2227,4 +2232,92 @@ void Programmers_Camouflage()
 
 	printf("answer = %d\n", answer);
 
+}
+
+void Pokemon() {
+	std::string new_id{ "...!@BaT#*..y.abcdefghijklm" };
+	std::string answer = "";
+
+	char Previous = new_id.at(0);
+	for (int i = 1; i < new_id.size(); i++)
+	{
+		if ('A' <= new_id.at(i) && new_id.at(i) <= 'Z')
+		{
+			new_id.at(i) = std::tolower(new_id.at(i));
+		}
+		else if ('a' <= new_id.at(i) && new_id.at(i) <= 'z')continue;
+		else if ('0' <= new_id.at(i) && new_id.at(i) <= '9')continue;
+		else if ('-' == new_id.at(i))continue;
+		else if ('_' == new_id.at(i)) continue;
+		else if ('.' == new_id.at(i) && Previous != new_id.at(i))continue;
+
+		//문자열을 삭제한다.
+		new_id.erase(new_id.begin() + i);
+
+		Previous = new_id.at(i-1);
+	}
+
+	if (new_id.back() == '.')
+	{
+		new_id.pop_back();
+	}
+
+	if (new_id.size() > 15)
+	{
+		new_id = new_id.substr(0, 15);
+	}
+	else 
+	{
+		while (new_id.size() < 3)
+		{
+			new_id.push_back('a');
+		}
+	}
+	answer = new_id;
+}
+
+void Programmers_Remainder()
+{
+	int n = 54;
+	int answer = 0;
+
+	if (n % 2 == 1)
+	{
+		answer = 2;
+	}
+	else
+	{
+		for (int i = 3; i * i <= n - 1; i += 2)
+		{
+			if ((n - 1) % i == 0)
+			{
+				answer = i;
+				break;
+			}
+		}
+	}
+	if (answer == 0)
+	{
+		answer = n - 1;
+	}
+}
+
+void Programmers_MaxMin()
+{
+	std::string s = {"-1 -2 -3 -4"};
+
+	std::stringstream TransNumber{ s };
+
+	std::set<int> numbers;
+
+	while (!TransNumber.fail())
+	{
+		int number;
+		TransNumber >> number;
+		numbers.insert(number);
+	}
+
+	std::string answer = std::to_string(*numbers.begin()) + ' ' + std::to_string(*numbers.rbegin());
+
+	printf("answer = %s", answer.c_str());
 }
