@@ -36,6 +36,9 @@
     <ClInclude Include="ReturnShared.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="TestProject.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyComplex.cpp">
@@ -54,6 +57,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="ReturnShared.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TestProject.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

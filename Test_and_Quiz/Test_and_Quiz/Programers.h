@@ -162,6 +162,8 @@ void Programmers_PairDelete();
 //최소 직사각형
 void MinimumRectangle();
 
+//최댓값과 최솟값
+void Programmers_MaxMin();
 
 void Pokemon();
 
@@ -181,6 +183,3 @@ void Programmers_Camouflage();
 
 //나머지
 void Programmers_Remainder();
-
-//최댓값과 최솟값
-void Programmers_MaxMin();

@@ -7,6 +7,7 @@
 #include "MyExcel.h"
 #include "Programers.h"
 #include "ReturnShared.h"
+#include "TestProject.h"
 
 int TestClass::public_static_val = 0;
 int TestClass::pri_static_val = 0;
@@ -1423,7 +1424,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_MaxMin();
+	RegexTest();
 	return 0;
 }
 
