@@ -2368,3 +2368,23 @@ void Programmers_ThreeMusketeer()
 	} while (std::next_permutation(check.begin(), check.end()));
 	
 }
+
+void Programmers_Coke()
+{
+	int a = 3;
+	int b = 2;
+	int n = 20;
+	
+	int answer = 0;
+
+	while (n >= a)
+	{
+		answer += n / a * b;
+		n = (n / a * b) + n % a;
+	}
+	
+	return;
+
+	//프로그래머스 또 다른 정답 이게 정답이라고 생각합니다.
+	answer = (n > b ? n - b : 0) / (a - b) * b;
+}

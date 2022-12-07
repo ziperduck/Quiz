@@ -1424,7 +1424,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_ThreeMusketeer();
+	Programmers_Coke();
 	return 0;
 }
 
