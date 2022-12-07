@@ -2321,3 +2321,50 @@ void Programmers_MaxMin()
 
 	printf("answer = %s", answer.c_str());
 }
+
+
+void Programmers_ThreeMusketeer()
+{
+	std::vector<int> number{ -1, 0, 1, 1,1,1 };
+	
+	int answer = 0;
+
+	std::sort(number.begin(), number.end());
+	for (int i = 0; i < number.size()-2; i++)
+	{
+		for (int k = i+1; k < number.size() - 1; k++)
+		{
+			for (int m = k+1; m < number.size(); m++)
+			{
+				int sum = (number.at(i)) + (number.at(k)) + (number.at(m));
+				if (sum > 0)
+				{
+					break;
+				}
+				else if (sum == 0)
+				{
+					++answer;
+				}
+				
+			}
+		}
+	}
+	std::cout << "answer = " << answer << std::endl;
+	return;
+	//프로그래머스 다른 정답
+
+	std::vector<bool> check(number.size());
+
+	std::fill_n(check.begin(), 3, false);
+	std::fill_n(check.begin() + 3, number.size() - 3, true);
+	do {
+		int sum = 0;
+		for (int i = 0; i < check.size(); i++) {
+			if (!check[i])
+				sum += number[i];
+		}
+		if (sum == 0)
+			answer++;
+	} while (std::next_permutation(check.begin(), check.end()));
+	
+}

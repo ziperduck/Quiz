@@ -1424,7 +1424,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	RegexTest();
+	Programmers_ThreeMusketeer();
 	return 0;
 }
 
