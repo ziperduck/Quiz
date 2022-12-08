@@ -1,5 +1,6 @@
 #include <sstream>
 #include "Programers.h"
+#include <cctype>
 
 
 vector<int> pull_two_number() {
@@ -2367,6 +2368,23 @@ void Programmers_ThreeMusketeer()
 			answer++;
 	} while (std::next_permutation(check.begin(), check.end()));
 	
+}
+//최소값 만들기
+void Programmers_MakeMinValue()
+{
+	std::vector<int> A = {1,2};
+	std::vector<int> B = {3,4};
+	int answer = 0;
+
+	std::sort(A.begin(), A.end());
+	std::sort(B.begin(), B.end(),std::greater<int>());
+
+	for (int i = 0; i < A.size(); i++)
+	{
+		answer += A[i] * B[i];
+	}
+
+	std::cout << answer << std::endl;
 }
 
 void Programmers_Coke()

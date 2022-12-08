@@ -1424,7 +1424,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_Coke();
+	Programmers_MakeMinValue();
 	return 0;
 }
 

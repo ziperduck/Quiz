@@ -167,6 +167,8 @@ void Programmers_MaxMin();
 
 //삼총사
 void Programmers_ThreeMusketeer();
+//최소값 만들기
+void Programmers_MakeMinValue();
 
 void Programmers_Coke();
 
