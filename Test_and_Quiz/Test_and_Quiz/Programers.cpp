@@ -2077,6 +2077,147 @@ void MinimumRectangle()
 	answer = Bigger[0] * Bigger[1];
 }
 
+//최대값 최소값문제
+void Programmers_MaxMin()
+{
+	std::string s = { "-1 -2 -3 -4" };
+
+	std::stringstream TransNumber{ s };
+
+	std::set<int> numbers;
+
+	while (!TransNumber.fail())
+	{
+		int number;
+		TransNumber >> number;
+		numbers.insert(number);
+	}
+
+	std::string answer = std::to_string(*numbers.begin()) + ' ' + std::to_string(*numbers.rbegin());
+
+	printf("answer = %s", answer.c_str());
+}
+
+//삼총사 문제
+void Programmers_ThreeMusketeer()
+{
+	std::vector<int> number{ -1, 0, 1, 1,1,1 };
+
+	int answer = 0;
+
+	std::sort(number.begin(), number.end());
+	for (int i = 0; i < number.size() - 2; i++)
+	{
+		for (int k = i + 1; k < number.size() - 1; k++)
+		{
+			for (int m = k + 1; m < number.size(); m++)
+			{
+				int sum = (number.at(i)) + (number.at(k)) + (number.at(m));
+				if (sum > 0)
+				{
+					break;
+				}
+				else if (sum == 0)
+				{
+					++answer;
+				}
+
+			}
+		}
+	}
+	std::cout << "answer = " << answer << std::endl;
+	return;
+	//프로그래머스 다른 정답
+
+	std::vector<bool> check(number.size());
+
+	std::fill_n(check.begin(), 3, false);
+	std::fill_n(check.begin() + 3, number.size() - 3, true);
+	do {
+		int sum = 0;
+		for (int i = 0; i < check.size(); i++) {
+			if (!check[i])
+				sum += number[i];
+		}
+		if (sum == 0)
+			answer++;
+	} while (std::next_permutation(check.begin(), check.end()));
+
+}
+//최소값 만들기
+void Programmers_MakeMinValue()
+{
+	std::vector<int> A = { 1,2 };
+	std::vector<int> B = { 3,4 };
+	int answer = 0;
+
+	std::sort(A.begin(), A.end());
+	std::sort(B.begin(), B.end(), std::greater<int>());
+
+	for (int i = 0; i < A.size(); i++)
+	{
+		answer += A[i] * B[i];
+	}
+
+	std::cout << answer << std::endl;
+}
+
+//코크 문제
+void Programmers_Coke()
+{
+	int a = 3;
+	int b = 2;
+	int n = 20;
+
+	int answer = 0;
+
+	while (n >= a)
+	{
+		answer += n / a * b;
+		n = (n / a * b) + n % a;
+	}
+
+	return;
+
+	//프로그래머스 또 다른 정답 이게 정답이라고 생각합니다.
+	answer = (n > b ? n - b : 0) / (a - b) * b;
+}
+
+//레벨 1 첫번째 문제
+void Programmers_Level1()
+{
+	vector<vector<int>> arr1{ { 1,2 }, { 2, 3 } };
+	vector<vector<int>> arr2{ { 3,4 }, { 5,6 } };
+
+	vector<vector<int>> answer;
+
+	for (int i = 0; i < arr1.at(0).size(); i++)
+	{
+
+		int sum = 0;
+		answer.push_back(std::vector<int>());
+		for (int k = 0; k < arr1.size(); k++)
+		{
+			answer.back().push_back(arr1[i][k] + arr2[i][k]);
+		}
+
+	}
+
+}
+
+//레벨 1 두번째 문제
+void Programmers_Level1_2()
+{
+
+	std::string s = "Zbcdefg";
+	std::sort(s.begin(), s.end(), std::greater<>());
+
+	std::cout << s << std::endl;
+
+	std::string answer = "";
+
+}
+
 //못 푼 문제
 
 // 컬러링북
@@ -2277,6 +2418,36 @@ void Pokemon() {
 	answer = new_id;
 }
 
+void Programmers_Parenthesis()
+{
+	std::string s;
+	bool answer = true;
+
+	std::stack<char> Parentesis;
+
+	for (auto& i : s)
+	{
+		if (i == ')')
+		{
+			if (Parentesis.size() > 0)
+			{
+				Parentesis.pop();
+				continue;
+			}
+			else
+			{
+				answer = false;
+				break;
+			}
+		}
+		Parentesis.push(i);
+	}
+	if (Parentesis.size() > 0)
+	{
+		answer = false;
+	}
+}
+
 void Programmers_Remainder()
 {
 	int n = 54;
@@ -2301,140 +2472,4 @@ void Programmers_Remainder()
 	{
 		answer = n - 1;
 	}
-}
-
-void Programmers_MaxMin()
-{
-	std::string s = {"-1 -2 -3 -4"};
-
-	std::stringstream TransNumber{ s };
-
-	std::set<int> numbers;
-
-	while (!TransNumber.fail())
-	{
-		int number;
-		TransNumber >> number;
-		numbers.insert(number);
-	}
-
-	std::string answer = std::to_string(*numbers.begin()) + ' ' + std::to_string(*numbers.rbegin());
-
-	printf("answer = %s", answer.c_str());
-}
-
-
-void Programmers_ThreeMusketeer()
-{
-	std::vector<int> number{ -1, 0, 1, 1,1,1 };
-	
-	int answer = 0;
-
-	std::sort(number.begin(), number.end());
-	for (int i = 0; i < number.size()-2; i++)
-	{
-		for (int k = i+1; k < number.size() - 1; k++)
-		{
-			for (int m = k+1; m < number.size(); m++)
-			{
-				int sum = (number.at(i)) + (number.at(k)) + (number.at(m));
-				if (sum > 0)
-				{
-					break;
-				}
-				else if (sum == 0)
-				{
-					++answer;
-				}
-				
-			}
-		}
-	}
-	std::cout << "answer = " << answer << std::endl;
-	return;
-	//프로그래머스 다른 정답
-
-	std::vector<bool> check(number.size());
-
-	std::fill_n(check.begin(), 3, false);
-	std::fill_n(check.begin() + 3, number.size() - 3, true);
-	do {
-		int sum = 0;
-		for (int i = 0; i < check.size(); i++) {
-			if (!check[i])
-				sum += number[i];
-		}
-		if (sum == 0)
-			answer++;
-	} while (std::next_permutation(check.begin(), check.end()));
-	
-}
-//최소값 만들기
-void Programmers_MakeMinValue()
-{
-	std::vector<int> A = {1,2};
-	std::vector<int> B = {3,4};
-	int answer = 0;
-
-	std::sort(A.begin(), A.end());
-	std::sort(B.begin(), B.end(),std::greater<int>());
-
-	for (int i = 0; i < A.size(); i++)
-	{
-		answer += A[i] * B[i];
-	}
-
-	std::cout << answer << std::endl;
-}
-
-void Programmers_Coke()
-{
-	int a = 3;
-	int b = 2;
-	int n = 20;
-	
-	int answer = 0;
-
-	while (n >= a)
-	{
-		answer += n / a * b;
-		n = (n / a * b) + n % a;
-	}
-	
-	return;
-
-	//프로그래머스 또 다른 정답 이게 정답이라고 생각합니다.
-	answer = (n > b ? n - b : 0) / (a - b) * b;
-}
-
-void Programmers_Level1()
-{
-	vector<vector<int>> arr1{{ 1,2 }, { 2, 3 }};
-	vector<vector<int>> arr2{ { 3,4 }, { 5,6 } };
-
-	vector<vector<int>> answer;
-
-	for (int i = 0; i < arr1.at(0).size(); i++)
-	{
-
-		int sum = 0;
-		answer.push_back(std::vector<int>());
-		for (int k = 0; k < arr1.size(); k++)
-		{
-			answer.back().push_back(arr1[i][k] + arr2[i][k]);
-		}
-
-	}
-	
-}
-void Programmers_Level1_2()
-{
-
-	std::string s = "Zbcdefg";
-	std::sort(s.begin(), s.end(),std::greater<>());
-
-	std::cout << s << std::endl;
-
-	std::string answer = "";
-
 }
