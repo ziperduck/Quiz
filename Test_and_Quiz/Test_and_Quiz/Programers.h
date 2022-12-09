@@ -170,6 +170,10 @@ void Programmers_ThreeMusketeer();
 
 void Programmers_Coke();
 
+void Programmers_Level1();
+
+void Programmers_Level1_2();
+
 void Pokemon();
 
 //¸ø Ç¬ ¹®Á¦

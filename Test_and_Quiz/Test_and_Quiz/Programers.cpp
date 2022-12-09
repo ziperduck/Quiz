@@ -2388,3 +2388,35 @@ void Programmers_Coke()
 	//프로그래머스 또 다른 정답 이게 정답이라고 생각합니다.
 	answer = (n > b ? n - b : 0) / (a - b) * b;
 }
+
+void Programmers_Level1()
+{
+	vector<vector<int>> arr1{{ 1,2 }, { 2, 3 }};
+	vector<vector<int>> arr2{ { 3,4 }, { 5,6 } };
+
+	vector<vector<int>> answer;
+
+	for (int i = 0; i < arr1.at(0).size(); i++)
+	{
+
+		int sum = 0;
+		answer.push_back(std::vector<int>());
+		for (int k = 0; k < arr1.size(); k++)
+		{
+			answer.back().push_back(arr1[i][k] + arr2[i][k]);
+		}
+
+	}
+	
+}
+void Programmers_Level1_2()
+{
+
+	std::string s = "Zbcdefg";
+	std::sort(s.begin(), s.end(),std::greater<>());
+
+	std::cout << s << std::endl;
+
+	std::string answer = "";
+
+}
