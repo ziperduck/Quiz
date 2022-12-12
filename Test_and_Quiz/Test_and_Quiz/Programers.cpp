@@ -2218,6 +2218,35 @@ void Programmers_Level1_2()
 
 }
 
+//숫자의 표현
+void Programmers_NumberExpression()
+{
+	int n = 0;
+	int answer = 1;
+	
+	if (n < 3)
+	{
+		answer = 1;
+		return;
+	}
+
+	int num = n - 3;
+	if (num % (2) == 0)
+	{
+		++answer;
+	}
+
+	for (int i = 3; n >= i; i++)
+	{
+		num -= i;
+		if (num %(i) == 0)
+		{
+			++answer;
+		}
+	}
+}
+
+
 //못 푼 문제
 
 // 컬러링북
@@ -2473,3 +2502,4 @@ void Programmers_Remainder()
 		answer = n - 1;
 	}
 }
+

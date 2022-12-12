@@ -183,6 +183,9 @@ void Pokemon();
 //괄호 문제
 void Programmers_Parenthesis();
 
+//숫자의 표현
+void Programmers_NumberExpression();
+
 //못 푼 문제
 
 // 컬러링북
