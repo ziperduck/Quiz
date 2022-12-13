@@ -2245,7 +2245,42 @@ void Programmers_NumberExpression()
 		}
 	}
 }
+//다음 큰 숫자
+void Programmers_NextBetterNumber()
+{
+	int n = 78;
+	int answer = n;
 
+	int add = 1;
+	int one = 0;
+
+	while (n > 0)
+	{
+		if (n % 2 == 1)
+		{
+			one = one << 1;
+			++one;
+		}
+		else
+		{
+			if (one == 0)
+			{
+				add = add << 1;
+			}
+			else
+			{
+				break;
+			}
+		}
+
+		n = n >> 1;
+	}
+
+	one = one >> 1;
+	answer += add + one;
+
+	std::cout << "answer = " << answer << std::endl;
+}
 
 //못 푼 문제
 

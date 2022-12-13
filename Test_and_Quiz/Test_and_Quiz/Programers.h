@@ -186,6 +186,9 @@ void Programmers_Parenthesis();
 //숫자의 표현
 void Programmers_NumberExpression();
 
+//다음 큰 숫자
+void Programmers_NextBetterNumber();
+
 //못 푼 문제
 
 // 컬러링북
