@@ -178,19 +178,13 @@ void Programmers_Level1();
 //레벨 1 두번째 문제
 void Programmers_Level1_2();
 
-//레벨 2 첫번째 문제
-void Programmers_Level2_1();
-
-//레벨 2 두번째 문제
-void Programmers_Level2_2();
-
 void Pokemon();
 
 //괄호 문제
 void Programmers_Parenthesis();
 
-//다음 큰 숫자
-void Programmers_NextBetterNumber();
+//숫자의 표현
+void Programmers_NumberExpression();
 
 //못 푼 문제
 

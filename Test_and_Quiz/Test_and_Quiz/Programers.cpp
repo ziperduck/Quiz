@@ -2218,66 +2218,34 @@ void Programmers_Level1_2()
 
 }
 
-//레벨 2 첫번째 문제
-void Programmers_Level2_1()
+//숫자의 표현
+void Programmers_NumberExpression()
 {
-	int n = 9;
-	long long answer = 0;
-	//피보나치 수열
-	long long A = 0;
-	long long B = 1;
-	long long Sum = 1;
-	for (int i = 1; i <= n; i++)
+	int n = 0;
+	int answer = 1;
+	
+	if (n < 3)
 	{
-		answer = A + B;
-		A = B;
-		B = answer;
-	}
-	std::cout << "answer = " << answer << std::endl;
-}
-
-//레벨 2 두번째 문제
-void Programmers_Level2_2()
-{
-
-}
-
-
-void Programmers_NextBetterNumber()
-{
-	int n = 78;
-	int answer = n;
-
-	int add = 1;
-	int one = 0;
-
-	while(n > 0)
-	{
-		if (n % 2 == 1)
-		{
-			one = one << 1;
-			++one;
-		}
-		else
-		{
-			if (one == 0)
-			{
-				add = add << 1;
-			}
-			else
-			{
-				break;
-			}
-		}
-
-		n = n >> 1;
+		answer = 1;
+		return;
 	}
 
-	one = one >> 1;
-	answer += add + one;
+	int num = n - 3;
+	if (num % (2) == 0)
+	{
+		++answer;
+	}
 
-	std::cout << "answer = " << answer << std::endl;
+	for (int i = 3; n >= i; i++)
+	{
+		num -= i;
+		if (num %(i) == 0)
+		{
+			++answer;
+		}
+	}
 }
+
 
 //못 푼 문제
 
@@ -2509,7 +2477,6 @@ void Programmers_Parenthesis()
 	}
 }
 
-
 void Programmers_Remainder()
 {
 	int n = 54;
@@ -2535,3 +2502,4 @@ void Programmers_Remainder()
 		answer = n - 1;
 	}
 }
+
