@@ -1424,7 +1424,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_Level1();
+	Programmers_NextBetterNumber();
 	return 0;
 }
 
