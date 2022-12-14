@@ -2282,6 +2282,30 @@ void Programmers_NextBetterNumber()
 	std::cout << "answer = " << answer << std::endl;
 }
 
+//Ä«Æê
+void Programmers_Carpet()
+{
+	int brown = 8;
+	int yellow = 1;
+	vector<int> answer;
+	int halfRow = std::ceil(std::sqrt(yellow));
+
+	for (int i = 1; i <= halfRow; i++)
+	{
+		int total = (yellow / i + i) * 2 + 4;
+		if (total == brown)
+		{
+			int Columns = yellow / i + 2 ;
+			int Row = i + 2;
+			
+			answer.push_back(Columns);
+			answer.push_back(Row);
+
+			break;
+		}
+	}
+}
+
 //¸ø Ç¬ ¹®Á¦
 
 // ÄÃ·¯¸µºÏ

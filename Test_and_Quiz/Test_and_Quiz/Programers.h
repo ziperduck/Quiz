@@ -189,6 +189,9 @@ void Programmers_NumberExpression();
 //다음 큰 숫자
 void Programmers_NextBetterNumber();
 
+//카펫
+void Programmers_Carpet();
+
 //못 푼 문제
 
 // 컬러링북
