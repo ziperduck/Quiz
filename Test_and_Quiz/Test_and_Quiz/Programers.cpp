@@ -2292,6 +2292,8 @@ void Programmers_Carpet()
 
 	for (int i = 1; i <= halfRow; i++)
 	{
+		if (yellow % i > 0)
+			continue;
 		int total = (yellow / i + i) * 2 + 4;
 		if (total == brown)
 		{
