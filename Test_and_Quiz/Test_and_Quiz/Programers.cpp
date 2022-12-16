@@ -2308,6 +2308,38 @@ void Programmers_Carpet()
 	}
 }
 
+//¿µ¾î ³¡¸»ÀÕ±â
+void Programmers_WordRelay()
+{
+	int n = 3;
+	std::vector<std::string> words{ "tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank" };
+
+	std::vector<int> answer{0,0};
+	
+	std::set<std::string> indexword{ words.front()};
+
+	for (int i = 1; i < words.size(); i++)
+	{
+
+		std::string Word = words.at(i);
+		if (indexword.find(Word) == indexword.end() 
+			&& words.at(i - 1).back() == Word.front())
+		{
+			indexword.insert(Word);
+		}
+		else
+		{
+			answer.at(0) = i % n + 1;
+			answer.at(1) = i / n;
+			break;
+		}
+		
+
+	}
+
+
+}
+
 //¸ø Ç¬ ¹®Á¦
 
 // ÄÃ·¯¸µºÏ

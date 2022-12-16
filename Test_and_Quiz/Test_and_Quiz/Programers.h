@@ -192,6 +192,9 @@ void Programmers_NextBetterNumber();
 //Ä«Æê
 void Programmers_Carpet();
 
+//¿µ¾î ³¡¸»ÀÕ±â
+void Programmers_WordRelay();
+
 //¸ø Ç¬ ¹®Á¦
 
 // ÄÃ·¯¸µºÏ
