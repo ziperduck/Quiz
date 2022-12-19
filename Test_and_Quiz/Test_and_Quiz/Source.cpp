@@ -1424,7 +1424,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_WordRelay();
+	Programmers_Lifeboat();
 	return 0;
 }
 

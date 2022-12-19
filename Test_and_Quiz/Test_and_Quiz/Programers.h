@@ -195,6 +195,9 @@ void Programmers_Carpet();
 //영어 끝말잇기
 void Programmers_WordRelay();
 
+//구명보트
+void Programmers_Lifeboat();
+
 //못 푼 문제
 
 // 컬러링북

@@ -2340,6 +2340,36 @@ void Programmers_WordRelay()
 
 }
 
+//구명보트
+void Programmers_Lifeboat()
+{
+	std::vector<int> people = { 70, 50, 80, 50 };
+	int limit = 100;
+
+	std::sort(people.begin(), people.end(),std::greater<int>());
+	int answer = 0;
+
+	int sum = 0;
+	while (people.size() > 0)
+	{
+		sum = 0;
+	for (int i = 0; i < people.size(); i++)
+	{
+		sum += people.at(i);
+		if (sum > limit)
+		{
+			sum -= people.at(i);
+		}
+		else
+		{
+			people.erase(people.begin() +i);
+			--i;
+		}
+	}
+	++answer;
+	}
+}
+
 //못 푼 문제
 
 // 컬러링북
