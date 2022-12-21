@@ -2349,24 +2349,20 @@ void Programmers_Lifeboat()
 	std::sort(people.begin(), people.end(),std::greater<int>());
 	int answer = 0;
 
-	int sum = 0;
-	while (people.size() > 0)
-	{
-		sum = 0;
+	int i = 0;
 	for (int i = 0; i < people.size(); i++)
 	{
-		sum += people.at(i);
-		if (sum > limit)
+		int sum = people.at(i);
+		for (int k = i+1; k < people.size(); k++)
 		{
-			sum -= people.at(i);
+			sum += people.back();
+			if (sum > limit)
+			{
+				break;
+			}
+			people.pop_back();
 		}
-		else
-		{
-			people.erase(people.begin() +i);
-			--i;
-		}
-	}
-	++answer;
+		++answer;
 	}
 }
 
