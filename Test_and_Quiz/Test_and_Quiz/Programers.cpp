@@ -2366,6 +2366,15 @@ void Programmers_Lifeboat()
 	}
 }
 
+//예상 대진표
+void Programmers_Tournament()
+{
+	int n, int a, int b;
+	int answer = a < b ? ((b + 1) / 2 - (a + 1) / 2) : ((a + 1) / 2 - (b + 1) / 2);
+	answer += 1;
+
+}
+
 //못 푼 문제
 
 // 컬러링북
