@@ -2369,9 +2369,20 @@ void Programmers_Lifeboat()
 //예상 대진표
 void Programmers_Tournament()
 {
-	int n, int a, int b;
-	int answer = a < b ? ((b + 1) / 2 - (a + 1) / 2) : ((a + 1) / 2 - (b + 1) / 2);
-	answer += 1;
+	int n = 8;
+	int a = 7;
+	int b = 8;
+	int answer = 0;
+	
+	for (int i = n / 2; i > 1 ; i /= 2)
+	{
+		answer = i;
+		if ((a > i & b <= i) || (a <= i & b > i))
+		{
+			break;
+		}
+	}
+	--answer;
 
 }
 

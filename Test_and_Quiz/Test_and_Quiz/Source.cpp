@@ -1424,7 +1424,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_Lifeboat();
+	Programmers_Tournament();
 	return 0;
 }
 
