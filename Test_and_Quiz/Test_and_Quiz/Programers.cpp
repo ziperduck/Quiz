@@ -1,6 +1,7 @@
 #include <sstream>
 #include "Programers.h"
 #include <cctype>
+#include <bitset>
 
 
 vector<int> pull_two_number() {
@@ -2369,21 +2370,25 @@ void Programmers_Lifeboat()
 //예상 대진표
 void Programmers_Tournament()
 {
-	int n = 8;
-	int a = 7;
-	int b = 8;
+	int n = 1048576;
+	int a = 8;
+	int b = 1;
 	int answer = 0;
+
+	std::bitset<20> bit(n - 1);
+
+	answer = bit.count();
 	
-	for (int i = n / 2; i > 1 ; i /= 2)
+	for (int i = n / 2; 1 < i; i /= 2)
 	{
-		answer = i;
 		if ((a > i & b <= i) || (a <= i & b > i))
 		{
 			break;
 		}
+		--answer;
 	}
-	--answer;
 
+	std::cout <<"answer = " << answer << std::endl;
 }
 
 //못 푼 문제
