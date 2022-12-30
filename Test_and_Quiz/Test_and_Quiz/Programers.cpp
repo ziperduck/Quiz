@@ -2367,6 +2367,20 @@ void Programmers_Lifeboat()
 	}
 }
 
+void Programmers_FoodFight()
+{
+	std::vector<int> food = {1,2,4,8};
+
+	std::string answer = "0";
+	for (int i = food.size() - 1; i > 0; --i)
+	{
+		std::string Foods(food.at(i) / 2, (char)('0' + i));
+		answer = Foods + answer + Foods;
+	}
+}
+
+//못 푼 문제
+
 //예상 대진표
 void Programmers_Tournament()
 {
@@ -2390,8 +2404,6 @@ void Programmers_Tournament()
 
 	std::cout <<"answer = " << answer << std::endl;
 }
-
-//못 푼 문제
 
 // 컬러링북
 void Programmers_ColoringBook()
