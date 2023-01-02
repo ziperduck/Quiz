@@ -39,6 +39,9 @@
     <ClInclude Include="TestProject.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="TestTemplate.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyComplex.cpp">
@@ -61,6 +64,9 @@
     </ClCompile>
     <ClCompile Include="TestProject.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TestTemplate.cpp">
+      <Filter>헤더 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

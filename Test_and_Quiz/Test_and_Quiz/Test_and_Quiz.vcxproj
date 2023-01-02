@@ -27,6 +27,7 @@
     <ClInclude Include="Programers.h" />
     <ClInclude Include="ReturnShared.h" />
     <ClInclude Include="TestProject.h" />
+    <ClInclude Include="TestTemplate.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyComplex.cpp" />
@@ -36,6 +37,7 @@
     <ClCompile Include="ReturnShared.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="TestProject.cpp" />
+    <ClCompile Include="TestTemplate.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

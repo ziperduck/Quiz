@@ -8,6 +8,7 @@
 #include "Programers.h"
 #include "ReturnShared.h"
 #include "TestProject.h"
+#include "TestTemplate.h"
 
 int TestClass::public_static_val = 0;
 int TestClass::pri_static_val = 0;
@@ -1424,7 +1425,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_FoodFight();
+	runTemplateParameters();
 	return 0;
 }
 
