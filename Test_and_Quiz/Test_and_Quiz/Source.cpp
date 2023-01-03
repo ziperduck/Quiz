@@ -1425,7 +1425,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	STL::CuriosityVectorAddres();
+	Programmers_Tournament();
 	return 0;
 }
 

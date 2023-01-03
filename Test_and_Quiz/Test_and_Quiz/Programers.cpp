@@ -2384,9 +2384,9 @@ void Programmers_FoodFight()
 //예상 대진표
 void Programmers_Tournament()
 {
-	int n = 1048576;
-	int a = 8;
-	int b = 1;
+	int n = 16;
+	int a = 9;
+	int b = 13;
 	int answer = 0;
 
 	std::bitset<20> bit(n - 1);
