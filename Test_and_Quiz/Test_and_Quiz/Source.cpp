@@ -1425,7 +1425,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Metaprograming();
+	STL::CuriosityVectorAddres();
 	return 0;
 }
 

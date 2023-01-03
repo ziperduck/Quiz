@@ -11,3 +11,9 @@ void RegexTest()
 	std::cout << string << " : " << std::boolalpha << std::regex_match(string, regex) << std::endl;
 }
 
+void STL::CuriosityVectorAddres()
+{
+	std::vector<int> V = {1,2,3,4,5};
+
+	std::cout << &V.at(0) << " : " << &V.at(1) << std::endl;
+}
