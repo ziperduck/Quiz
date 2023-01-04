@@ -2,6 +2,7 @@
 #include <regex>
 #include <string>
 #include <iostream>
+#include <algorithm>
 
 void RegexTest()
 {
@@ -16,4 +17,11 @@ void STL::CuriosityVectorAddres()
 	std::vector<int> V = {1,2,3,4,5};
 
 	std::cout << &V.at(0) << " : " << &V.at(1) << std::endl;
+}
+
+void STL::CheckCoundAlgorithm()
+{
+	std::vector<int> V = { 1,2,3,4,5 };
+
+	std::count(V.begin(), V.end(), 3);
 }

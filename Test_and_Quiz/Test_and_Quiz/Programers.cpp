@@ -2385,20 +2385,29 @@ void Programmers_FoodFight()
 void Programmers_Tournament()
 {
 	int n = 16;
-	int a = 9;
-	int b = 13;
+	int a = 12;
+	int b = 14;
 	int answer = 0;
 
 	std::bitset<20> bit(n - 1);
 
 	answer = bit.count();
 	
-	for (int i = n / 2; 1 < i; i /= 2)
+	for (int i = n / 4,k = n /2; 0 < i; i /= 2)
 	{
-		if ((a > i & b <= i) || (a <= i & b > i))
+		if (a > k && b > k)
+		{
+			k += i;
+		}
+		else if (a <= k && b <= k)
+		{
+			k -= i;
+		}
+		else
 		{
 			break;
 		}
+
 		--answer;
 	}
 

@@ -6,4 +6,5 @@ namespace STL
 {
 	void CuriosityVectorAddres();
 
+	void CheckCoundAlgorithm();
 }
