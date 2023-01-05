@@ -2379,7 +2379,6 @@ void Programmers_FoodFight()
 	}
 }
 
-//못 푼 문제
 
 //예상 대진표
 void Programmers_Tournament()
@@ -2413,6 +2412,8 @@ void Programmers_Tournament()
 
 	std::cout <<"answer = " << answer << std::endl;
 }
+
+//못 푼 문제
 
 // 컬러링북
 void Programmers_ColoringBook()
