@@ -200,6 +200,8 @@ void Programmers_Lifeboat();
 
 void Programmers_FoodFight();
 
+void Programmers_LongJump();
+
 //예상 대진표
 void Programmers_Tournament();
 

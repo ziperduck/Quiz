@@ -2379,6 +2379,24 @@ void Programmers_FoodFight()
 	}
 }
 
+void Programmers_LongJump() {
+	int n = 2000;
+	long long answer = 1;
+
+	long long a = 1, b = 1;
+
+	for (int i = 1; i < n; i++)
+	{
+		answer = (long long)(a + b);
+		a = b;
+		b = answer;
+		
+	}
+
+	std::cout << answer << ", ";
+	std::cout << std::endl;
+}
+
 
 //예상 대진표
 void Programmers_Tournament()

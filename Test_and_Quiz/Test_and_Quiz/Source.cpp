@@ -1425,7 +1425,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_Tournament();
+	Programmers_LongJump();
 	return 0;
 }
 
