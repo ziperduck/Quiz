@@ -200,6 +200,9 @@ void Programmers_Lifeboat();
 
 void Programmers_FoodFight();
 
+
+void Programmers_LongJump();
+
 //못 푼 문제
 
 //예상 대진표
