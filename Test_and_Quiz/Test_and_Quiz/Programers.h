@@ -198,8 +198,10 @@ void Programmers_WordRelay();
 //구명보트
 void Programmers_Lifeboat();
 
+//푸드 파이터
 void Programmers_FoodFight();
 
+//멀리뛰기
 void Programmers_LongJump();
 
 //예상 대진표

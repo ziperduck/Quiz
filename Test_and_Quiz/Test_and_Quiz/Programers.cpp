@@ -2384,13 +2384,11 @@ void Programmers_LongJump() {
 	long long answer = 1;
 
 	long long a = 1, b = 1;
-
-	for (int i = 1; i < n; i++)
+	for (int i = 2; i <= n; i++)
 	{
-		answer = (long long)(a + b);
+		answer = (a + b) % 1234567;
 		a = b;
 		b = answer;
-		
 	}
 
 	std::cout << answer << ", ";
