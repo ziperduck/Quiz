@@ -207,6 +207,9 @@ void Programmers_LongJump();
 //예상 대진표
 void Programmers_Tournament();
 
+//H 인덱스
+void Programmers_HIndex();
+
 //못 푼 문제
 
 // 컬러링북

@@ -1425,7 +1425,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_LongJump();
+	Programmers_HIndex();
 	return 0;
 }
 

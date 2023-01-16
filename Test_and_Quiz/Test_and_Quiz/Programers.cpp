@@ -2429,6 +2429,24 @@ void Programmers_Tournament()
 	std::cout <<"answer = " << answer << std::endl;
 }
 
+void Programmers_HIndex()
+{
+	std::vector<int> citations = {100,100,100,100,100 };
+	std::sort(citations.begin(), citations.end());
+	int answer = 0;
+
+	for (int i = 0; i < citations.size();i++)
+	{
+		if (citations.at(i) < citations.size() - i)
+		{
+			continue;
+		}
+
+		answer = citations.size() - i;
+		break;
+	}
+}
+
 //¸ø Ç¬ ¹®Á¦
 
 // ÄÃ·¯¸µºÏ
