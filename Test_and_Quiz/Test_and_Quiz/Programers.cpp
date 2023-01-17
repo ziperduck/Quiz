@@ -2,6 +2,7 @@
 #include "Programers.h"
 #include <cctype>
 #include <bitset>
+#include <unordered_set>
 
 
 vector<int> pull_two_number() {
@@ -2445,6 +2446,39 @@ void Programmers_HIndex()
 		answer = citations.size() - i;
 		break;
 	}
+}
+
+//망할 소문자도 나오는 거냐고
+void Programmers_Cach()
+{
+	int cacheSize = 2;
+	std::vector<std::string> cities = { "Jeju", "Pangyo", "NewYork", "newyork"};
+	int answer = 0;
+
+	std::vector<std::string> caches;
+
+	for (auto i = cities.begin(); i < cities.end(); i++)
+	{
+		auto cache = std::find(caches.begin(), caches.end(),*i);
+
+		if (cache != caches.end())
+		{
+			++answer;
+			caches.erase(cache);
+			caches.push_back(*i);
+		}
+		else
+		{
+			answer += 5;
+			caches.push_back(*i);
+		}
+
+		if (caches.size() > cacheSize)
+		{
+			caches.erase(caches.begin());
+		}
+	}
+	std::cout << "answer = " << answer << std::endl;
 }
 
 //못 푼 문제

@@ -210,6 +210,8 @@ void Programmers_Tournament();
 //H ÀÎµ¦½º
 void Programmers_HIndex();
 
+void Programmers_Cach();
+
 //¸ø Ç¬ ¹®Á¦
 
 // ÄÃ·¯¸µºÏ

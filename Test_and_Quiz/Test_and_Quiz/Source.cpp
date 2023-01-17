@@ -1425,7 +1425,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_HIndex();
+	Programmers_Cach();
 	return 0;
 }
 
