@@ -2481,6 +2481,48 @@ void Programmers_Cach()
 	std::cout << "answer = " << answer << std::endl;
 }
 
+//È¸ÀüÇÏ´Â °ýÈ£
+void Programmers_RotatingBracket()
+{
+	std::string s = "[](){}";
+	int answer = 0;
+	const int StringSize = s.size();
+
+
+	for (int i = 0; i <= StringSize; i++)
+	{
+		std::string stack;
+		++answer;
+		for (auto k = s.begin() + i; k != s.end(); k++)
+		{
+			if (*k == '[' || *k == '{' || *k == '(')
+			{
+				stack.push_back(*k);
+			}
+			else if (!stack.empty() && std::abs(*k - stack.back()) < 3)
+			{
+				stack.pop_back();
+			}
+			else
+			{
+				if (stack.empty())
+				{
+					--answer;
+				}
+				break;
+			}
+		}
+		if (!stack.empty())
+		{
+			--answer;
+		}
+		s.push_back(s.at(i));
+	}
+
+	std::cout << " s = " << s << std::endl;
+	std::cout << " answer =  " << answer << std::endl;
+}
+
 //¸ø Ç¬ ¹®Á¦
 
 // ÄÃ·¯¸µºÏ
