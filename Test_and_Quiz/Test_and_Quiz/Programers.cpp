@@ -2523,6 +2523,31 @@ void Programmers_RotatingBracket()
 	std::cout << " answer =  " << answer << std::endl;
 }
 
+//Çà·Ä °ö¼À
+void Programmers_MultiplicationMatrix()
+{
+	vector<vector<int>> arr1 = { {1, 4}};
+	vector<vector<int>> arr2 = {{1,2, 3}, { 4,5,6 }};
+	
+	vector<vector<int>> answer( arr1.size(), vector<int>(arr2.front().size()));
+
+	for (size_t i = 0; i < answer.size(); i++)
+	{
+		for (size_t k = 0; k < answer.front().size(); k++)
+		{
+			int sum = 0;
+			for (size_t n = 0; n < arr1.front().size(); n++)
+			{
+				sum += arr1[i][n] * arr2[n][k];
+			}
+			answer[i][k] = sum;
+		}
+	}
+
+
+	
+}
+
 //¸ø Ç¬ ¹®Á¦
 
 // ÄÃ·¯¸µºÏ

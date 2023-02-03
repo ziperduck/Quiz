@@ -216,6 +216,9 @@ void Programmers_Cach();
 //회전하는 괄호
 void Programmers_RotatingBracket();
 
+//행렬 곱셈
+void Programmers_MultiplicationMatrix();
+
 //못 푼 문제
 
 // 컬러링북

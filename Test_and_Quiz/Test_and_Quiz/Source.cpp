@@ -1425,7 +1425,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_RotatingBracket();
+	Programmers_MultiplicationMatrix();
 	return 0;
 }
 
