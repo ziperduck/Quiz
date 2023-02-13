@@ -219,6 +219,9 @@ void Programmers_RotatingBracket();
 //Çà·Ä °ö¼À
 void Programmers_MultiplicationMatrix();
 
+//Æ©ÇÃ
+void Programmers_Tuple();
+
 //¸ø Ç¬ ¹®Á¦
 
 // ÄÃ·¯¸µºÏ

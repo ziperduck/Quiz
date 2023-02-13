@@ -2548,6 +2548,47 @@ void Programmers_MultiplicationMatrix()
 	
 }
 
+void Programmers_Tuple()
+{
+	std::string s = "{{2},{2,1},{2,1,3},{2,1,3,4}}";
+	std::vector<int> answer;
+
+	std::stringstream trans_num(s);
+
+	int sum = 0;
+
+	char ch;
+	int num = 0;
+
+	trans_num >> ch;
+	while (true)
+	{
+
+		trans_num >> ch;
+		if (ch == '}')
+		{
+			if (sum > 0)
+			{
+				answer.push_back(sum);
+				sum = 0;
+			}
+			trans_num >> ch;
+			if(ch == '}')
+			{
+				break;
+			}
+			trans_num >> ch;
+		}
+
+		trans_num >> num;
+		if (num != 0)
+		{
+			sum += num;
+		}
+	}
+
+}
+
 //¸ø Ç¬ ¹®Á¦
 
 // ÄÃ·¯¸µºÏ
