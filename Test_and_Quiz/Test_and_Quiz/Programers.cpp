@@ -2561,7 +2561,7 @@ void Programmers_Tuple()
 	int num = 0;
 
 	trans_num >> ch;
-	while (true)
+	while (!trans_num.eof())
 	{
 
 		trans_num >> ch;
@@ -2573,20 +2573,20 @@ void Programmers_Tuple()
 				sum = 0;
 			}
 			trans_num >> ch;
-			if(ch == '}')
-			{
-				break;
-			}
 			trans_num >> ch;
 		}
 
 		trans_num >> num;
-		if (num != 0)
-		{
-			sum += num;
-		}
+		sum += num;
 	}
 
+	std::sort(answer.begin(), answer.end());
+	std::adjacent_difference(answer.begin(), answer.end(), answer.begin());
+
+	for (auto i : answer)
+	{
+		std::cout << i<<", ";
+	}
 }
 
 //¸ø Ç¬ ¹®Á¦
