@@ -222,6 +222,9 @@ void Programmers_MultiplicationMatrix();
 //튜플
 void Programmers_Tuple();
 
+//n^2 자르기
+void Programmers_ArrayCut();
+
 //못 푼 문제
 
 // 컬러링북

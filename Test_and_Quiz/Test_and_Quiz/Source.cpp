@@ -1425,7 +1425,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_Tuple();
+	Programmers_ArrayCut();
 	return 0;
 }
 

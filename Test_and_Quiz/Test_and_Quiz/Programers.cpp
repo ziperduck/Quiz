@@ -2589,6 +2589,33 @@ void Programmers_Tuple()
 	}
 }
 
+void Programmers_ArrayCut()
+{
+	int n = 5;
+	long long left =  23;
+	long long right = 24;
+
+	vector<int> answer;
+	
+	int row = left / n;
+	int column = left % n;
+
+	const int rowlength = n - 1;
+	
+	for (long long i = left; i <= right; i++, column++)
+	{
+		if (column > rowlength)
+		{
+			column = 0;
+			++row;
+		}
+
+		answer.push_back(std::clamp(column, row, rowlength) + 1);
+		std::cout << answer.back() << ", ";
+	}
+	std::cout << std::endl;
+}
+
 //¸ø Ç¬ ¹®Á¦
 
 // ÄÃ·¯¸µºÏ
