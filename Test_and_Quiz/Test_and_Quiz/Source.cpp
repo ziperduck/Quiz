@@ -1425,7 +1425,7 @@ void Jotkka_fun() {
 
 
 int main() {
-	Programmers_ArrayCut();
+	Programmers_SortMandarin();
 	return 0;
 }
 

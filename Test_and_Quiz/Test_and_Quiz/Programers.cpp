@@ -2616,6 +2616,44 @@ void Programmers_ArrayCut()
 	std::cout << std::endl;
 }
 
+constexpr bool SortMandarin(const std::pair<int, int>& a, const std::pair<int, int>& b)
+{
+	return a.second == b.second ? a.first > b.first : a.second > b.second;
+}
+
+void Programmers_SortMandarin()
+{
+	int k = 6;
+	std::vector<int> tangerine = { 1, 3, 2, 5, 4, 5, 2, 3 };
+
+	int answer = 0;
+
+	std::map<int, int> MapTangerine;
+
+	for (auto i : tangerine)
+	{
+		if (MapTangerine.find(i) == MapTangerine.end())
+		{
+			MapTangerine.insert(std::pair<int,int>(i,0));
+		}
+		MapTangerine.find(i)->second++;
+	}
+	
+	std::vector<std::pair<int, int>> SortTangerine(MapTangerine.begin(), MapTangerine.end());
+	std::sort(SortTangerine.begin(), SortTangerine.end(), SortMandarin);
+
+	for (int i = 0; i < SortTangerine.size(); i++)
+	{
+		k -= SortTangerine.at(i).second;
+		if (k < 1)
+		{
+			answer = i + 1;
+			break;
+		}
+	}
+	
+}
+
 //¸ø Ç¬ ¹®Á¦
 
 // ÄÃ·¯¸µºÏ
